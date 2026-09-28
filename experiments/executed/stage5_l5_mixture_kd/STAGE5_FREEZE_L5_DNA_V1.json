@@ -1,0 +1,65 @@
+{
+  "protocol_id": "FAS_STAGE5_L5_MIXTURE_KD_STRONG_BASELINE_V1",
+  "created_utc": "2026-09-24T00:00:00Z",
+  "status": "frozen_before_stage5_results",
+  "genealogy_seeds": [
+    23,
+    47,
+    71
+  ],
+  "development_seed_excluded": 11,
+  "scenario": "L5-mixture-kd-v2",
+  "student_model": "Qwen/Qwen3-1.7B-Base",
+  "parents": [
+    "Math",
+    "Code",
+    "Medical",
+    "Science"
+  ],
+  "teacher_exposure": [
+    0.4,
+    0.3,
+    0.2,
+    0.1
+  ],
+  "distillation_prompt_source": "held-out rows from frozen formal_raw corpora excluding exact frozen expert-training rows",
+  "distillation_prompts_per_domain": 500,
+  "distillation_total_prompts": 2000,
+  "teacher_decode": {
+    "do_sample": false,
+    "max_new_tokens": 512
+  },
+  "student_train": {
+    "qlora_4bit": true,
+    "epochs": 1.0,
+    "batch_size": 1,
+    "grad_accum": 16,
+    "learning_rate": 0.0002,
+    "max_seq_length": 2048,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05
+  },
+  "audit_decode": {
+    "do_sample": false,
+    "max_new_tokens": 96,
+    "encoder": "sentence-transformers/all-mpnet-base-v2"
+  },
+  "probe_strategies": [
+    "active_B32",
+    "random_B32"
+  ],
+  "fas_support_threshold": "reuse Stage4 seed-specific cal-support threshold; no retuning on L5",
+  "calibration_regime": "g1_transfer_diagnostic_no_finite_sample_claim",
+  "strong_baselines": {
+    "Absolute+NNLS": "same semantic-output geometry, same selected probes",
+    "Random-IFRF": "same FAS response/decomposition with frozen random_B32 probes",
+    "DNA-Decomp": "released llm-dna==0.2.3 DNA extraction + common NNLS; support threshold fixed 0.01 per v0.11 baseline pipeline"
+  },
+  "guardrails": [
+    "teacher exposure is diagnostic construction/exposure metadata, not realized functional-coordinate ground truth",
+    "matched G0 finite-sample conformal guarantee does not transfer to KD",
+    "modelDNA is N/A for cross-scale KD under published weight-access/same-shape assumptions",
+    "do not retrain seed11"
+  ]
+}

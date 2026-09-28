@@ -1,0 +1,14 @@
+# Documentation-only example for the commands in EXPERIMENT_RUNBOOK.md
+probes: data/probes/interventions.jsonl
+encoder: sentence-transformers/all-mpnet-base-v2
+samples: 4
+paired_seeds: true
+max_new_tokens: 256
+temperature: 0.7
+top_p: 0.95
+base_model: Qwen/Qwen3-4B-Base
+ancestors:
+  Math: runs/experts/math/adapter
+  Code: runs/experts/code/adapter
+  Medical: runs/experts/medical/adapter
+  Science: runs/experts/science/adapter

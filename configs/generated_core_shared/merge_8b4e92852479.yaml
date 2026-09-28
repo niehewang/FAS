@@ -1,0 +1,19 @@
+merge_method: dare_ties
+base_model: Qwen/Qwen3-4B-Base
+models:
+- model: runs/full/s11/math
+  parameters:
+    weight: 0.4
+    density: 0.5
+- model: runs/full/s11/code
+  parameters:
+    weight: 0.35
+    density: 0.5
+- model: runs/full/s11/medical
+  parameters:
+    weight: 0.25
+    density: 0.5
+parameters:
+  normalize: true
+tokenizer_source: base
+dtype: bfloat16

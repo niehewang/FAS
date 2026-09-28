@@ -1,0 +1,110 @@
+project: FAS-TPAMI
+version: 0.9
+policy:
+  default_tier: conditional
+  tiers:
+    core:
+      description: Minimum evidence needed to support the main TPAMI claims before any expansion.
+    conditional:
+      description: Run only when the claim-specific gate below is satisfied.
+    optional:
+      description: Supplementary robustness / breadth; never blocks the main paper.
+claim_gates:
+  C1_active_identifiability:
+    required_before: [C2_support_recovery]
+    pass_rule: "Active probing improves held-out conditioning and coordinate error on >=2/3 seeds at >=3 budgets."
+  C2_support_recovery:
+    required_before: [C3_nonlinear_lineage]
+    pass_rule: "FAS improves end-to-end Parent-F1 over Random-IFRF on core merge settings at nontrivial audit coverage."
+  C3_nonlinear_lineage:
+    required_before: [cross_scale, router_kd, diffusion]
+    pass_rule: "1.7B Mixture-KD and Deep-Chain retain meaningful support recovery beyond weight-linear ancestry."
+  C4_functional_validity:
+    pass_rule: "Within-domain FAS-Shapley correlation exceeds construction-share correlation in a majority of domains/seeds."
+  C5_open_set:
+    pass_rule: "Matched G0 false-abstention is consistent with alpha and Unknown-A is separated from Known-only."
+rules:
+  # core rows
+  - tier: core
+    scenario: L1-linear-2p
+    variants: [v1]
+    seeds: [11, 23, 47]
+    claims: [C2]
+  - tier: core
+    scenario: L2-ties-3p
+    variants: [v1]
+    seeds: [11, 23, 47]
+    claims: [C2]
+  - tier: core
+    scenario: L5-mixture-kd
+    variants: [v2]
+    students: [1p7b]
+    seeds: [11, 23, 47]
+    claims: [C3]
+  - tier: core
+    scenario: L7-deep-ancestry
+    variants: [v1]
+    students: [1p7b]
+    seeds: [11, 23, 47]
+    claims: [C3]
+  - tier: core
+    scenario: L8-open-set
+    variants: [known_only, unknown_A, unknown_B_heavy_transform]
+    seeds: [11]
+    claims: [C5]
+  - tier: conditional
+    scenario: L8-open-set
+    variants: [known_only, unknown_A, unknown_B_heavy_transform]
+    seeds: [23, 47]
+    trigger: C5_open_set
+    claims: [C5]
+
+  # conditional breadth / stress
+  - tier: conditional
+    scenario: L1-linear-2p
+    variants: [v2, v3]
+    trigger: C2_support_recovery
+    claims: [C2]
+  - tier: conditional
+    scenario: L2-ties-3p
+    variants: [v2]
+    trigger: C2_support_recovery
+    claims: [C2]
+  - tier: conditional
+    scenario: L3-dare-sft
+    trigger: C2_support_recovery
+    claims: [C2, C3]
+  - tier: conditional
+    scenario: L4-merge-sft-int4
+    trigger: C2_support_recovery
+    claims: [C3]
+  - tier: conditional
+    scenario: L5-mixture-kd
+    variants: [v1]
+    students: [1p7b]
+    trigger: C3_nonlinear_lineage
+    claims: [C3]
+  - tier: conditional
+    scenario: L5-mixture-kd
+    students: [0p6b]
+    trigger: cross_scale
+    claims: [C9]
+  - tier: conditional
+    scenario: L6-router-kd-sft
+    trigger: router_kd
+    claims: [C3, C4]
+  - tier: conditional
+    scenario: L7-deep-ancestry
+    students: [0p6b]
+    trigger: cross_scale
+    claims: [C3, C9]
+optional_extensions:
+  - id: second_llm_family
+    trigger: C2_support_recovery
+    claims: [C2]
+  - id: encoder_sensitivity
+    trigger: C2_support_recovery
+    claims: [C6]
+  - id: diffusion
+    trigger: diffusion
+    claims: [C7]

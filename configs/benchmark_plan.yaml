@@ -1,0 +1,70 @@
+project: FAS-TPAMI
+language_model:
+  base: Qwen3-4B-Base
+  ancestors:
+  - math
+  - code
+  - medical
+  - science
+  lora:
+    rank: 16
+    alpha: 32
+    dropout: 0.05
+  student_sizes:
+  - 1.7B
+  - 0.6B
+probe_pool:
+  target_total: 1000
+  per_domain_min: 250
+  types:
+  - value
+  - entity
+  - constraint
+  - relation
+  - composition
+  budgets:
+  - 8
+  - 16
+  - 32
+  - 64
+  - 128
+  repeats:
+  - 1
+  - 2
+  - 4
+  - 8
+calibration:
+  include_transformations:
+  - merge
+  - sft
+  - quantization
+  - distillation
+  planned_n:
+    signal: 40
+    support: 24
+    open_retained: 40
+  alpha_main: 0.05
+  alpha_sensitivity:
+  - 0.1
+  alpha_optional:
+  - 0.01
+  open_candidate_pool: 50
+  note: Main finite-sample claims use alpha=0.05; alpha=0.10 is sensitivity. Alpha=0.01
+    is optional and may be reported only when at least 100 exchangeable calibration
+    scores are available.
+  matched_g0_family: weighted_adapter_composition
+  shift_only_families:
+  - sft
+  - quantization
+  - distillation
+  - deep_chain
+reporting:
+  genealogy_seeds: 3
+  metrics:
+  - parent_f1
+  - exact_support
+  - coordinate_l1
+  - shapley_spearman
+  - open_auroc
+  - fpr95
+  - query_budget

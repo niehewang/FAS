@@ -1,0 +1,54 @@
+{
+  "protocol": "FAS_STAGE7_ROBUST_AUDIT_V1",
+  "frozen_date": "2026-09-27",
+  "confirmatory_seeds": [23,47,71],
+  "no_training": true,
+  "reuse": ["Stage3 deterministic experts/response banks", "Stage4 matched-G0 signal calibration/support thresholds"],
+  "encoder_sensitivity": {
+    "target": "L1-linear-2p (Math+Code, 0.5/0.5)",
+    "selection": "active_B32",
+    "encoders": [
+      "sentence-transformers/all-mpnet-base-v2",
+      "sentence-transformers/all-MiniLM-L6-v2",
+      "BAAI/bge-base-en-v1.5"
+    ],
+    "normalization": "B32-local ancestor Frobenius normalization within each encoder; sensitivity-only, no conformal transfer",
+    "support_for_sensitivity": "top-2 coordinates (cardinality fixed only for sensitivity comparison, not paper ancestry decision)",
+    "gate_C6": {
+      "mean_alt_support_jaccard_vs_primary_min": 0.55,
+      "mean_alt_coordinate_spearman_vs_primary_min": 0.50,
+      "each_alt_encoder_mean_true_parent_f1_min": 0.67
+    }
+  },
+  "open_set_selective": {
+    "known_bank": ["Math","Code","Medical"],
+    "withheld": "Science",
+    "selection": "active_B32",
+    "alpha_signal": 0.05,
+    "alpha_open": 0.05,
+    "cal_open_candidates_per_seed": 24,
+    "required_signal_eligible_cal_open_per_seed": 20,
+    "test_known_per_seed": 8,
+    "test_unknown_per_seed": 8,
+    "calibration_family": "G0 weighted LoRA cat; model-level disjoint targets; target weights frozen before execution",
+    "gate_C8": {
+      "pooled_open_auroc_min": 0.75,
+      "pooled_known_false_bank_insufficient_max": 0.15,
+      "pooled_unknown_bank_insufficient_rate_min": 0.67,
+      "probe_pair_shuffle_collapse_seeds_min": 2,
+      "base_zero_false_signal_rate_max": 0.0
+    }
+  },
+  "negative_controls": {
+    "probe_pair_shuffle": "within-domain cyclic derangement of edited-response pairing on L1 Active-B32; same permutation applied to target/base edited outputs",
+    "genealogy_label_permutation": "exact non-identity permutation average; diagnostic only",
+    "base_zero": "exact y=0 sanity check against frozen Stage4 signal calibration"
+  },
+  "guardrails": [
+    "Stage5/C3 is closed and is not re-opened by Stage7.",
+    "Alternative-encoder results carry no finite-sample conformal guarantee; Stage4 calibration is evaluator-specific.",
+    "Science is absent from the restricted verifier bank and from cal-open/known-test target construction.",
+    "Unknown-test targets contain Science with frozen weight in [0.35,0.55].",
+    "No threshold, alpha, encoder, seed, target weight, or gate may be changed after seeing Stage7 results."
+  ]
+}

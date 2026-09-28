@@ -1,0 +1,41 @@
+version: 0.9
+splits:
+  cal_signal:
+    purpose: low-signal noise floor for restricted-bank open-set experiment
+    allowed:
+    - base_repeats
+    - base_quantized
+    planned_n: 40
+  cal_support:
+    purpose: choose support threshold within restricted known bank
+    allowed:
+    - bank_complete_known_compositions
+    planned_n: 24
+  cal_open:
+    purpose: conformal residual null for restricted known bank
+    allowed:
+    - bank_complete_weighted_adapter_compositions
+    planned_n: 40
+    candidate_pool_n: 50
+  test:
+    purpose: final reporting only
+constraints:
+  model_level_disjoint: true
+  no_threshold_tuning_on_test: true
+  no_reuse_across_calibration_roles: true
+alphas:
+  signal:
+    main:
+    - 0.05
+    sensitivity:
+    - 0.1
+    optional: []
+  open:
+    main:
+    - 0.05
+    sensitivity:
+    - 0.1
+    optional: []
+notes:
+  conformal_resolution: n=40 gives minimum +1-rank p-value 1/41 < 0.05; seed11 is
+    the primary restricted-bank open-set calibration.

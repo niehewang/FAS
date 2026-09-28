@@ -1,0 +1,9 @@
+role: conditional_cross_modality
+base_model: stabilityai/stable-diffusion-xl-base-1.0
+image_encoder: openai/clip-vit-large-patch14
+samples: 2
+height: 768
+width: 768
+steps: 30
+guidance_scale: 5.0
+notes: "Use 2-4 LoRA ancestors sharing this base. Build seed-specific response banks exactly as in the LLM pipeline. This branch is conditional on the core language-model mechanism succeeding."

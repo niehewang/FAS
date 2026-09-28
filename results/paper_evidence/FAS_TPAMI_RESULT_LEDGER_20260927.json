@@ -1,0 +1,101 @@
+{
+  "date": "2026-09-27",
+  "authoritative": true,
+  "stages": {
+    "stage1": {
+      "status": "complete"
+    },
+    "stage2": {
+      "status": "complete",
+      "role": "development"
+    },
+    "stage3": {
+      "status": "complete",
+      "seeds": [
+        23,
+        47,
+        71
+      ]
+    },
+    "stage4": {
+      "status": "complete",
+      "g0_matched_calibration": true,
+      "support_thresholds": [
+        0.01,
+        0.01,
+        0.15
+      ]
+    },
+    "stage5": {
+      "status": "complete",
+      "C3_supported": false,
+      "role": "cross_scale_stress_boundary"
+    },
+    "stage5E_F": {
+      "status": "complete",
+      "same_scale_pooled_residual": 0.6744,
+      "cross_scale_pooled_residual": 0.9578
+    },
+    "stage5G": {
+      "status": "complete",
+      "bridge_gate_pass": false
+    },
+    "stage5H": {
+      "status": "cancelled_do_not_run"
+    },
+    "stage6": {
+      "status": "complete",
+      "exit_code": 0,
+      "C4_gate_pass": true,
+      "aggregate": {
+        "construction_mean_shapley_spearman": 0.1111111111111111,
+        "absolute_mean_shapley_spearman": 0.5962250448649377,
+        "fas_mean_shapley_spearman": 0.5555555555555556,
+        "fas_minus_construction": 0.4444444444444445,
+        "fas_win_or_tie_cells_vs_construction": 9,
+        "construction_top1_match": 0.4444444444444444,
+        "absolute_top1_match": 0.8888888888888888,
+        "fas_top1_match": 0.7777777777777778,
+        "construction_mean_loo_spearman": 0.1111111111111111,
+        "absolute_mean_loo_spearman": 0.20733615597604876,
+        "fas_mean_loo_spearman": 0.4444444444444444,
+        "fas_mean_false_candidate_code_mass": 0.17904894033949997,
+        "absolute_mean_false_candidate_code_mass": 0.06714915156801926
+      },
+      "heldout_utility": {
+        "n_per_domain": 96,
+        "domains": [
+          "Math",
+          "Medical",
+          "Science"
+        ],
+        "sha256": "5d916e0fb59a4af20faa710c5c0466614aa6e999a234fdb80d42a148529c1e9a"
+      }
+    },
+    "stage7": {
+      "status": "next",
+      "package": "FAS_Server_Stage7_RobustAudit_v1.tar.gz",
+      "claims": [
+        "C6",
+        "C8"
+      ],
+      "no_training": true
+    },
+    "stage8": {
+      "status": "pending_after_stage7",
+      "final_experimental_block": true
+    }
+  },
+  "claim_status": {
+    "C1": "supported_in_confirmatory_same_family_setting",
+    "C2": "supported_but_strong_absolute_baseline_must_be_reported",
+    "C3": "not_supported_as_positive_cross_scale_claim; stress_boundary_only",
+    "C4": "supported_in_tested_controlled_same_scale_adapter_composition_family",
+    "C5": "supported_for_matched_G0_calibration_only",
+    "C6": "pending_stage7",
+    "C7": "optional_not_required",
+    "C8": "pending_stage7",
+    "C9": "not_supported_broadly; cross_scale_boundary"
+  },
+  "next_action": "Run Stage7 Robust Audit v1. Do not run Stage5H and do not reopen Stage5/C3."
+}

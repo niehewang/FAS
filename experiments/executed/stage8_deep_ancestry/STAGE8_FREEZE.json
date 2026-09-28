@@ -1,0 +1,46 @@
+{
+  "protocol": "FAS_STAGE8_DEEP_ANCESTRY_MATCHEDSCALE_V1",
+  "frozen_date": "2026-09-27",
+  "role": "final deep-ancestry stress block; same-scale only; does not reopen failed cross-scale C3",
+  "confirmatory_seeds": [23, 47, 71],
+  "base_model": "Qwen/Qwen3-4B-Base",
+  "ancestor_bank": ["Math", "Code", "Medical", "Science"],
+  "true_ancestry": ["Math", "Code", "Medical"],
+  "chain": {
+    "D1": {"operation": "DARE-TIES merge", "weights": {"Math": 0.40, "Code": 0.35, "Medical": 0.25}, "density": 0.5, "normalize": true},
+    "D2": {"operation": "base-neutral auxiliary SFT on D1", "examples_per_domain": 100, "teacher": "Qwen3-4B-Base", "max_new_tokens": 256, "epochs": 1.0, "learning_rate": 0.0001},
+    "D3": {"operation": "INT4/NF4 inference view of D2", "bnb_4bit_quant_type": "nf4"},
+    "D4": {"operation": "response KD from D3 into Qwen3-4B-Base QLoRA student", "examples_per_domain": 250, "max_new_tokens": 256, "epochs": 1.0, "learning_rate": 0.0002}
+  },
+  "data": {
+    "source": "Stage5-style source-disjoint held-out formal_raw pool excluding expert-training rows",
+    "candidate_per_domain": 500,
+    "aux_per_domain": 100,
+    "kd_per_domain": 250,
+    "split": "deterministic hash split, disjoint aux/KD; remaining 150/domain unused",
+    "aux_target": "frozen base-model greedy responses so no single ancestry domain is privileged"
+  },
+  "audit": {
+    "decode": "greedy_do_sample_false",
+    "encoder": "sentence-transformers/all-mpnet-base-v2",
+    "budget": 32,
+    "strategies": ["active", "random"],
+    "dictionary": "Stage3 seed-matched four-ancestor functional bank with v0.11 global ancestor-norm normalization",
+    "support_threshold": "reuse frozen Stage4 seed-specific threshold; no retuning",
+    "calibration": "Stage4 G0 signal/open values are transfer diagnostics only; no finite-sample claim on D1-D4",
+    "baselines": ["Absolute output geometry with matched normalization"]
+  },
+  "gate": {
+    "D4_active_mean_parent_f1_min": 0.60,
+    "D4_active_mean_true_parent_mass_min": 0.65,
+    "D4_active_mean_relative_residual_max": 0.80,
+    "D4_active_f1_retention_vs_D1_min": 0.70,
+    "D4_active_seeds_parent_f1_ge_0p60_min": 2
+  },
+  "guardrails": [
+    "Cross-scale 4B-to-1.7B C3 remains closed regardless of Stage8 outcome.",
+    "Construction weights are lineage metadata, not functional ground truth.",
+    "No Stage8 threshold, seed, prompt split, merge weight, encoder, or gate may be changed after results.",
+    "Stage8 tests depth under a matched Qwen3-4B representation family; it is not an architecture-transfer claim."
+  ]
+}

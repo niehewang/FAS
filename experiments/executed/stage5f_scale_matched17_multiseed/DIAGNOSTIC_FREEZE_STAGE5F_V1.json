@@ -1,0 +1,31 @@
+{
+  "protocol_id": "FAS_STAGE5F_SCALEMATCHED17_MULTISEED_V1",
+  "status": "post_stage5_diagnostic_not_confirmatory_claim_test",
+  "purpose": "Confirm across seeds 47 and 71 whether the Stage5 L5 failure is primarily a 4B-to-1.7B representation/dictionary mismatch, using scale-matched 1.7B surrogate ancestry fields while leaving the existing KD students unchanged.",
+  "reference_seed": 23,
+  "new_seeds": [47, 71],
+  "targets": "existing Stage5 Qwen3-1.7B Mixture-KD students for seeds 47 and 71; no student retraining",
+  "surrogate_experts": {
+    "base_model": "Qwen/Qwen3-1.7B-Base",
+    "domains": ["Math", "Code", "Medical", "Science"],
+    "training_rows_per_domain": 3000,
+    "data": "exact frozen formal domain training JSONL used for the original controlled experts",
+    "recipe": "same v0.11 QLoRA recipe: r16 alpha32 dropout0.05, all Q/K/V/O and MLP projections, 1 epoch, batch1 x grad_accum16, lr2e-4, cosine, prompt-masked response loss"
+  },
+  "measurement": "existing deterministic Stage5 per-seed audit union and frozen Stage3 Active-B32 / Random-B32 selections; greedy max_new_tokens=96; all-mpnet-base-v2",
+  "multiseed_gate": {
+    "per_new_seed_same_scale_mean_residual_max": 0.80,
+    "per_new_seed_mean_improvement_vs_cross_scale_min": 0.15,
+    "every_new_seed_strategy_improvement_min": 0.10,
+    "pooled_all_three_seed_same_scale_mean_residual_max": 0.80,
+    "action_if_pass": "treat cross-scale mismatch as replicated diagnostic evidence; design and test a frozen scale-aware representation/bridge on the actual 4B->1.7B lineage before any L7 run",
+    "action_if_fail": "stop training scale-matched surrogate experts; revise the functional representation/decomposition before any L7 run"
+  },
+  "guardrails": [
+    "Seed-23 Stage5E artifacts are reference-only and must not be retrained.",
+    "The 1.7B sibling experts are diagnostic surrogates, not the true genealogical 4B teachers.",
+    "No Stage4 matched-G0 finite-sample calibration transfers to this G1 diagnostic.",
+    "Teacher exposure weights are construction metadata, not functional-coordinate ground truth.",
+    "Do not alter Stage1-5 original run roots/results and do not enter L7 solely because this diagnostic passes."
+  ]
+}

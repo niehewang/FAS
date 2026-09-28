@@ -1,0 +1,1597 @@
+{
+  "version": "STAGE7_ROBUST_AUDIT_V1",
+  "known_bank": [
+    "Math",
+    "Code",
+    "Medical"
+  ],
+  "withheld_ancestor": "Science",
+  "seeds": {
+    "23": {
+      "cal_open_candidates": [
+        {
+          "id": "s23_cal_00",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.8476673284272556,
+            "Math": 0.15233267157274444
+          }
+        },
+        {
+          "id": "s23_cal_01",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.11617474586367725,
+            "Medical": 0.3886982682769228,
+            "Math": 0.49512698585939996
+          }
+        },
+        {
+          "id": "s23_cal_02",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.2378861697053727,
+            "Code": 0.7621138302946273
+          }
+        },
+        {
+          "id": "s23_cal_03",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Code",
+            "Math"
+          ],
+          "weights": {
+            "Medical": 0.2952709402432682,
+            "Code": 0.4067404505995924,
+            "Math": 0.2979886091571394
+          }
+        },
+        {
+          "id": "s23_cal_04",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Medical": 0.8396442485333296,
+            "Math": 0.16035575146667042
+          }
+        },
+        {
+          "id": "s23_cal_05",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Code",
+            "Medical"
+          ],
+          "weights": {
+            "Math": 0.396048041759773,
+            "Code": 0.11229561913326781,
+            "Medical": 0.49165633910695916
+          }
+        },
+        {
+          "id": "s23_cal_06",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical"
+          ],
+          "weights": {
+            "Code": 0.4505083920267393,
+            "Medical": 0.5494916079732607
+          }
+        },
+        {
+          "id": "s23_cal_07",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.711863595492558,
+            "Math": 0.2881364045074421
+          }
+        },
+        {
+          "id": "s23_cal_08",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Medical",
+            "Code"
+          ],
+          "weights": {
+            "Math": 0.11799960174636168,
+            "Medical": 0.22901290658151513,
+            "Code": 0.6529874916721232
+          }
+        },
+        {
+          "id": "s23_cal_09",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical"
+          ],
+          "weights": {
+            "Code": 0.4823082368900626,
+            "Medical": 0.5176917631099374
+          }
+        },
+        {
+          "id": "s23_cal_10",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.11665011142000924,
+            "Math": 0.668415075681833,
+            "Code": 0.2149348128981577
+          }
+        },
+        {
+          "id": "s23_cal_11",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Medical": 0.25364407701819186,
+            "Math": 0.7463559229818081
+          }
+        },
+        {
+          "id": "s23_cal_12",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.4056252519752488,
+            "Code": 0.5943747480247512
+          }
+        },
+        {
+          "id": "s23_cal_13",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical"
+          ],
+          "weights": {
+            "Code": 0.6042880366985169,
+            "Medical": 0.3957119633014831
+          }
+        },
+        {
+          "id": "s23_cal_14",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.6263124591410361,
+            "Medical": 0.26063652829651296,
+            "Math": 0.11305101256245079
+          }
+        },
+        {
+          "id": "s23_cal_15",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical"
+          ],
+          "weights": {
+            "Code": 0.7325439747669514,
+            "Medical": 0.2674560252330487
+          }
+        },
+        {
+          "id": "s23_cal_16",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.2580342920625694,
+            "Math": 0.21664418601262192,
+            "Code": 0.5253215219248087
+          }
+        },
+        {
+          "id": "s23_cal_17",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.33857656661726737,
+            "Medical": 0.16521276179546968,
+            "Math": 0.4962106715872629
+          }
+        },
+        {
+          "id": "s23_cal_18",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical"
+          ],
+          "weights": {
+            "Code": 0.5665000554942441,
+            "Medical": 0.43349994450575596
+          }
+        },
+        {
+          "id": "s23_cal_19",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Medical"
+          ],
+          "weights": {
+            "Math": 0.6968647099409515,
+            "Medical": 0.3031352900590485
+          }
+        },
+        {
+          "id": "s23_cal_20",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Math",
+            "Medical"
+          ],
+          "weights": {
+            "Code": 0.3918135271648678,
+            "Math": 0.4460213074353857,
+            "Medical": 0.16216516539974646
+          }
+        },
+        {
+          "id": "s23_cal_21",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.3142305226885654,
+            "Math": 0.6857694773114347
+          }
+        },
+        {
+          "id": "s23_cal_22",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.3005190544191351,
+            "Math": 0.16382060294464626,
+            "Code": 0.5356603426362186
+          }
+        },
+        {
+          "id": "s23_cal_23",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Medical": 0.6893975641751603,
+            "Math": 0.3106024358248397
+          }
+        }
+      ],
+      "test_known": [
+        {
+          "id": "s23_known_00",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Medical": 0.8071875793360631,
+            "Math": 0.19281242066393695
+          }
+        },
+        {
+          "id": "s23_known_01",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.5087584079827284,
+            "Code": 0.4912415920172716
+          }
+        },
+        {
+          "id": "s23_known_02",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Code",
+            "Math"
+          ],
+          "weights": {
+            "Medical": 0.4667912581011693,
+            "Code": 0.27841885350693735,
+            "Math": 0.2547898883918934
+          }
+        },
+        {
+          "id": "s23_known_03",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.2556482430401193,
+            "Math": 0.11655940205638067,
+            "Code": 0.6277923549034999
+          }
+        },
+        {
+          "id": "s23_known_04",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.19651121217339892,
+            "Medical": 0.3739659032003127,
+            "Math": 0.42952288462628835
+          }
+        },
+        {
+          "id": "s23_known_05",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Code",
+            "Medical"
+          ],
+          "weights": {
+            "Math": 0.28578726220756834,
+            "Code": 0.5976470637895743,
+            "Medical": 0.1165656740028571
+          }
+        },
+        {
+          "id": "s23_known_06",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Medical"
+          ],
+          "weights": {
+            "Math": 0.44730443432066275,
+            "Medical": 0.5526955656793372
+          }
+        },
+        {
+          "id": "s23_known_07",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Medical",
+            "Code"
+          ],
+          "weights": {
+            "Math": 0.38408159302357175,
+            "Medical": 0.4981882420092196,
+            "Code": 0.11773016496720853
+          }
+        }
+      ],
+      "test_unknown": [
+        {
+          "id": "s23_unknown_00",
+          "role": "unknown",
+          "parents": [
+            "Math",
+            "Medical",
+            "Science"
+          ],
+          "weights": {
+            "Math": 0.20918046448748723,
+            "Medical": 0.2797618901126233,
+            "Science": 0.5110576453998894
+          }
+        },
+        {
+          "id": "s23_unknown_01",
+          "role": "unknown",
+          "parents": [
+            "Math",
+            "Medical",
+            "Science"
+          ],
+          "weights": {
+            "Math": 0.20451740287670167,
+            "Medical": 0.4093426824367088,
+            "Science": 0.3861399146865895
+          }
+        },
+        {
+          "id": "s23_unknown_02",
+          "role": "unknown",
+          "parents": [
+            "Medical",
+            "Math",
+            "Science"
+          ],
+          "weights": {
+            "Medical": 0.3630017886956724,
+            "Math": 0.2744350671224189,
+            "Science": 0.36256314418190855
+          }
+        },
+        {
+          "id": "s23_unknown_03",
+          "role": "unknown",
+          "parents": [
+            "Medical",
+            "Math",
+            "Science"
+          ],
+          "weights": {
+            "Medical": 0.2377510970447545,
+            "Math": 0.2506747790431668,
+            "Science": 0.5115741239120787
+          }
+        },
+        {
+          "id": "s23_unknown_04",
+          "role": "unknown",
+          "parents": [
+            "Medical",
+            "Code",
+            "Science"
+          ],
+          "weights": {
+            "Medical": 0.2283383117485741,
+            "Code": 0.3399816581004486,
+            "Science": 0.4316800301509774
+          }
+        },
+        {
+          "id": "s23_unknown_05",
+          "role": "unknown",
+          "parents": [
+            "Math",
+            "Science"
+          ],
+          "weights": {
+            "Math": 0.6222145919098755,
+            "Science": 0.3777854080901245
+          }
+        },
+        {
+          "id": "s23_unknown_06",
+          "role": "unknown",
+          "parents": [
+            "Medical",
+            "Math",
+            "Science"
+          ],
+          "weights": {
+            "Medical": 0.2694093315849238,
+            "Math": 0.36360991991093616,
+            "Science": 0.3669807485041401
+          }
+        },
+        {
+          "id": "s23_unknown_07",
+          "role": "unknown",
+          "parents": [
+            "Medical",
+            "Science"
+          ],
+          "weights": {
+            "Medical": 0.609531753562971,
+            "Science": 0.39046824643702893
+          }
+        }
+      ]
+    },
+    "47": {
+      "cal_open_candidates": [
+        {
+          "id": "s47_cal_00",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical"
+          ],
+          "weights": {
+            "Code": 0.8860903227865572,
+            "Medical": 0.11390967721344285
+          }
+        },
+        {
+          "id": "s47_cal_01",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.18442173645845178,
+            "Math": 0.3487789500689834,
+            "Code": 0.4667993134725648
+          }
+        },
+        {
+          "id": "s47_cal_02",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.11307231924242477,
+            "Medical": 0.11307231924242477,
+            "Math": 0.7738553615151504
+          }
+        },
+        {
+          "id": "s47_cal_03",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Math": 0.3015832102380443,
+            "Code": 0.6984167897619558
+          }
+        },
+        {
+          "id": "s47_cal_04",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Medical": 0.33894465083266795,
+            "Math": 0.661055349167332
+          }
+        },
+        {
+          "id": "s47_cal_05",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Code",
+            "Math"
+          ],
+          "weights": {
+            "Medical": 0.6089952649420873,
+            "Code": 0.276901565032116,
+            "Math": 0.11410317002579652
+          }
+        },
+        {
+          "id": "s47_cal_06",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical"
+          ],
+          "weights": {
+            "Code": 0.5368502479743491,
+            "Medical": 0.46314975202565095
+          }
+        },
+        {
+          "id": "s47_cal_07",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.13858940568520953,
+            "Code": 0.8614105943147905
+          }
+        },
+        {
+          "id": "s47_cal_08",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.24434592765355892,
+            "Medical": 0.33690144569003483,
+            "Math": 0.4187526266564062
+          }
+        },
+        {
+          "id": "s47_cal_09",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Code",
+            "Medical"
+          ],
+          "weights": {
+            "Math": 0.11309164713091915,
+            "Code": 0.6081761832472954,
+            "Medical": 0.27873216962178543
+          }
+        },
+        {
+          "id": "s47_cal_10",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Medical": 0.11480157761540212,
+            "Math": 0.8851984223845978
+          }
+        },
+        {
+          "id": "s47_cal_11",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Medical",
+            "Code"
+          ],
+          "weights": {
+            "Math": 0.7368475402072329,
+            "Medical": 0.1469222582646336,
+            "Code": 0.11623020152813344
+          }
+        },
+        {
+          "id": "s47_cal_12",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Code",
+            "Math"
+          ],
+          "weights": {
+            "Medical": 0.3781259805782063,
+            "Code": 0.43033371544871024,
+            "Math": 0.1915403039730835
+          }
+        },
+        {
+          "id": "s47_cal_13",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical"
+          ],
+          "weights": {
+            "Code": 0.69768178086542,
+            "Medical": 0.30231821913458
+          }
+        },
+        {
+          "id": "s47_cal_14",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Math",
+            "Medical"
+          ],
+          "weights": {
+            "Code": 0.11702344163745206,
+            "Math": 0.3866543042561915,
+            "Medical": 0.4963222541063565
+          }
+        },
+        {
+          "id": "s47_cal_15",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.39339435974553605,
+            "Math": 0.14815095104944367,
+            "Code": 0.45845468920502025
+          }
+        },
+        {
+          "id": "s47_cal_16",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Medical",
+            "Code"
+          ],
+          "weights": {
+            "Math": 0.17614115847478148,
+            "Medical": 0.443498825975395,
+            "Code": 0.3803600155498237
+          }
+        },
+        {
+          "id": "s47_cal_17",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Medical": 0.1542289207719481,
+            "Math": 0.845771079228052
+          }
+        },
+        {
+          "id": "s47_cal_18",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.8202398406498155,
+            "Code": 0.1797601593501845
+          }
+        },
+        {
+          "id": "s47_cal_19",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Math": 0.6380433116121136,
+            "Code": 0.36195668838788636
+          }
+        },
+        {
+          "id": "s47_cal_20",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Math": 0.4228927646468634,
+            "Code": 0.5771072353531367
+          }
+        },
+        {
+          "id": "s47_cal_21",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.3549752554191652,
+            "Medical": 0.5316617002141539,
+            "Math": 0.1133630443666809
+          }
+        },
+        {
+          "id": "s47_cal_22",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.28038760404186225,
+            "Medical": 0.3233593807581609,
+            "Math": 0.39625301519997685
+          }
+        },
+        {
+          "id": "s47_cal_23",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Medical": 0.8519508534574818,
+            "Math": 0.14804914654251816
+          }
+        }
+      ],
+      "test_known": [
+        {
+          "id": "s47_known_00",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Code",
+            "Math"
+          ],
+          "weights": {
+            "Medical": 0.6518498661221589,
+            "Code": 0.10932687503681568,
+            "Math": 0.2388232588410254
+          }
+        },
+        {
+          "id": "s47_known_01",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical"
+          ],
+          "weights": {
+            "Code": 0.2468900284031287,
+            "Medical": 0.7531099715968713
+          }
+        },
+        {
+          "id": "s47_known_02",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.4840532057897133,
+            "Math": 0.5159467942102868
+          }
+        },
+        {
+          "id": "s47_known_03",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Math": 0.42703945306192326,
+            "Code": 0.5729605469380769
+          }
+        },
+        {
+          "id": "s47_known_04",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Math": 0.3794501869620286,
+            "Code": 0.6205498130379715
+          }
+        },
+        {
+          "id": "s47_known_05",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.3056104151941161,
+            "Medical": 0.44332281786017474,
+            "Math": 0.2510667669457092
+          }
+        },
+        {
+          "id": "s47_known_06",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.7168914047139553,
+            "Code": 0.2831085952860447
+          }
+        },
+        {
+          "id": "s47_known_07",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.2881157654095679,
+            "Math": 0.5617008348105462,
+            "Code": 0.1501833997798859
+          }
+        }
+      ],
+      "test_unknown": [
+        {
+          "id": "s47_unknown_00",
+          "role": "unknown",
+          "parents": [
+            "Medical",
+            "Code",
+            "Science"
+          ],
+          "weights": {
+            "Medical": 0.2640313998863939,
+            "Code": 0.27106059705595564,
+            "Science": 0.4649080030576505
+          }
+        },
+        {
+          "id": "s47_unknown_01",
+          "role": "unknown",
+          "parents": [
+            "Medical",
+            "Code",
+            "Science"
+          ],
+          "weights": {
+            "Medical": 0.43538537338226463,
+            "Code": 0.11003851927933067,
+            "Science": 0.45457610733840476
+          }
+        },
+        {
+          "id": "s47_unknown_02",
+          "role": "unknown",
+          "parents": [
+            "Code",
+            "Science"
+          ],
+          "weights": {
+            "Code": 0.4837003586288511,
+            "Science": 0.5162996413711489
+          }
+        },
+        {
+          "id": "s47_unknown_03",
+          "role": "unknown",
+          "parents": [
+            "Math",
+            "Code",
+            "Science"
+          ],
+          "weights": {
+            "Math": 0.38784912568888374,
+            "Code": 0.1420178650405829,
+            "Science": 0.4701330092705334
+          }
+        },
+        {
+          "id": "s47_unknown_04",
+          "role": "unknown",
+          "parents": [
+            "Code",
+            "Science"
+          ],
+          "weights": {
+            "Code": 0.5754969142220987,
+            "Science": 0.4245030857779013
+          }
+        },
+        {
+          "id": "s47_unknown_05",
+          "role": "unknown",
+          "parents": [
+            "Code",
+            "Math",
+            "Science"
+          ],
+          "weights": {
+            "Code": 0.2842161969744051,
+            "Math": 0.29205433379941526,
+            "Science": 0.42372946922617977
+          }
+        },
+        {
+          "id": "s47_unknown_06",
+          "role": "unknown",
+          "parents": [
+            "Math",
+            "Science"
+          ],
+          "weights": {
+            "Math": 0.588738050172037,
+            "Science": 0.41126194982796305
+          }
+        },
+        {
+          "id": "s47_unknown_07",
+          "role": "unknown",
+          "parents": [
+            "Code",
+            "Science"
+          ],
+          "weights": {
+            "Code": 0.6062268389922547,
+            "Science": 0.39377316100774534
+          }
+        }
+      ]
+    },
+    "71": {
+      "cal_open_candidates": [
+        {
+          "id": "s71_cal_00",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Math",
+            "Medical"
+          ],
+          "weights": {
+            "Code": 0.27590947811648714,
+            "Math": 0.39843015441090673,
+            "Medical": 0.3256603674726061
+          }
+        },
+        {
+          "id": "s71_cal_01",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Math",
+            "Medical"
+          ],
+          "weights": {
+            "Code": 0.10945862047413024,
+            "Math": 0.6969297076447807,
+            "Medical": 0.19361167188108908
+          }
+        },
+        {
+          "id": "s71_cal_02",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Code",
+            "Medical"
+          ],
+          "weights": {
+            "Math": 0.3307940503529435,
+            "Code": 0.5509784705146417,
+            "Medical": 0.1182274791324148
+          }
+        },
+        {
+          "id": "s71_cal_03",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.695941406395352,
+            "Math": 0.304058593604648
+          }
+        },
+        {
+          "id": "s71_cal_04",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.25710865068904865,
+            "Medical": 0.2719704296056262,
+            "Math": 0.4709209197053252
+          }
+        },
+        {
+          "id": "s71_cal_05",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical"
+          ],
+          "weights": {
+            "Code": 0.6234913739048916,
+            "Medical": 0.3765086260951083
+          }
+        },
+        {
+          "id": "s71_cal_06",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical"
+          ],
+          "weights": {
+            "Code": 0.3193497472623405,
+            "Medical": 0.6806502527376596
+          }
+        },
+        {
+          "id": "s71_cal_07",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.14125794577902137,
+            "Medical": 0.22531621864593382,
+            "Math": 0.6334258355750448
+          }
+        },
+        {
+          "id": "s71_cal_08",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.41435005762224947,
+            "Math": 0.5856499423777506
+          }
+        },
+        {
+          "id": "s71_cal_09",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.33563582809352777,
+            "Code": 0.6643641719064722
+          }
+        },
+        {
+          "id": "s71_cal_10",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.5095975266769227,
+            "Math": 0.3734133313540556,
+            "Code": 0.11698914196902169
+          }
+        },
+        {
+          "id": "s71_cal_11",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Math": 0.14397278203349323,
+            "Code": 0.8560272179665067
+          }
+        },
+        {
+          "id": "s71_cal_12",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.3645580652717438,
+            "Medical": 0.5242061523122228,
+            "Math": 0.11123578241603321
+          }
+        },
+        {
+          "id": "s71_cal_13",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.2543539906044072,
+            "Medical": 0.3254378493299628,
+            "Math": 0.42020816006563
+          }
+        },
+        {
+          "id": "s71_cal_14",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Medical": 0.8863718570252098,
+            "Math": 0.11362814297479006
+          }
+        },
+        {
+          "id": "s71_cal_15",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Math": 0.7508838975164049,
+            "Code": 0.249116102483595
+          }
+        },
+        {
+          "id": "s71_cal_16",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Medical": 0.6389587174027852,
+            "Math": 0.3610412825972149
+          }
+        },
+        {
+          "id": "s71_cal_17",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Math": 0.8086680523681918,
+            "Code": 0.19133194763180825
+          }
+        },
+        {
+          "id": "s71_cal_18",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Math",
+            "Medical"
+          ],
+          "weights": {
+            "Code": 0.11297345815581034,
+            "Math": 0.6012113182254406,
+            "Medical": 0.285815223618749
+          }
+        },
+        {
+          "id": "s71_cal_19",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.20523678663071038,
+            "Math": 0.7947632133692897
+          }
+        },
+        {
+          "id": "s71_cal_20",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Code",
+            "Math"
+          ],
+          "weights": {
+            "Medical": 0.27081435079504307,
+            "Code": 0.5284655928336734,
+            "Math": 0.20072005637128348
+          }
+        },
+        {
+          "id": "s71_cal_21",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Medical"
+          ],
+          "weights": {
+            "Math": 0.35837830418829586,
+            "Medical": 0.6416216958117041
+          }
+        },
+        {
+          "id": "s71_cal_22",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical"
+          ],
+          "weights": {
+            "Code": 0.70421695561389,
+            "Medical": 0.2957830443861101
+          }
+        },
+        {
+          "id": "s71_cal_23",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.3401768372145961,
+            "Math": 0.20159842574658193,
+            "Code": 0.45822473703882194
+          }
+        }
+      ],
+      "test_known": [
+        {
+          "id": "s71_known_00",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.11563772202744123,
+            "Math": 0.745795917312256,
+            "Code": 0.13856636066030265
+          }
+        },
+        {
+          "id": "s71_known_01",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.745881460968829,
+            "Medical": 0.1356930430832906,
+            "Math": 0.1184254959478803
+          }
+        },
+        {
+          "id": "s71_known_02",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Medical",
+            "Math"
+          ],
+          "weights": {
+            "Code": 0.16436795157079825,
+            "Medical": 0.5216950523411343,
+            "Math": 0.3139369960880675
+          }
+        },
+        {
+          "id": "s71_known_03",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Code",
+            "Medical"
+          ],
+          "weights": {
+            "Math": 0.3871251305361473,
+            "Code": 0.2407589108239605,
+            "Medical": 0.3721159586398923
+          }
+        },
+        {
+          "id": "s71_known_04",
+          "role": "known",
+          "parents": [
+            "Code",
+            "Math",
+            "Medical"
+          ],
+          "weights": {
+            "Code": 0.2374352715196676,
+            "Math": 0.5564084488765842,
+            "Medical": 0.2061562796037482
+          }
+        },
+        {
+          "id": "s71_known_05",
+          "role": "known",
+          "parents": [
+            "Math",
+            "Medical",
+            "Code"
+          ],
+          "weights": {
+            "Math": 0.3652881143962188,
+            "Medical": 0.5203790408766863,
+            "Code": 0.11433284472709486
+          }
+        },
+        {
+          "id": "s71_known_06",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Math",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.11331408951308575,
+            "Math": 0.6159229088002155,
+            "Code": 0.27076300168669887
+          }
+        },
+        {
+          "id": "s71_known_07",
+          "role": "known",
+          "parents": [
+            "Medical",
+            "Code"
+          ],
+          "weights": {
+            "Medical": 0.7188987557986449,
+            "Code": 0.2811012442013552
+          }
+        }
+      ],
+      "test_unknown": [
+        {
+          "id": "s71_unknown_00",
+          "role": "unknown",
+          "parents": [
+            "Math",
+            "Science"
+          ],
+          "weights": {
+            "Math": 0.5746963367823257,
+            "Science": 0.4253036632176744
+          }
+        },
+        {
+          "id": "s71_unknown_01",
+          "role": "unknown",
+          "parents": [
+            "Medical",
+            "Science"
+          ],
+          "weights": {
+            "Medical": 0.5710951539557293,
+            "Science": 0.4289048460442707
+          }
+        },
+        {
+          "id": "s71_unknown_02",
+          "role": "unknown",
+          "parents": [
+            "Code",
+            "Math",
+            "Science"
+          ],
+          "weights": {
+            "Code": 0.1576914740161293,
+            "Math": 0.4186086462272076,
+            "Science": 0.4236998797566631
+          }
+        },
+        {
+          "id": "s71_unknown_03",
+          "role": "unknown",
+          "parents": [
+            "Medical",
+            "Math",
+            "Science"
+          ],
+          "weights": {
+            "Medical": 0.11778544467649596,
+            "Math": 0.36383273191241183,
+            "Science": 0.5183818234110922
+          }
+        },
+        {
+          "id": "s71_unknown_04",
+          "role": "unknown",
+          "parents": [
+            "Code",
+            "Math",
+            "Science"
+          ],
+          "weights": {
+            "Code": 0.3339515245026557,
+            "Math": 0.2699881677915993,
+            "Science": 0.3960603077057449
+          }
+        },
+        {
+          "id": "s71_unknown_05",
+          "role": "unknown",
+          "parents": [
+            "Code",
+            "Science"
+          ],
+          "weights": {
+            "Code": 0.6329975260578048,
+            "Science": 0.3670024739421952
+          }
+        },
+        {
+          "id": "s71_unknown_06",
+          "role": "unknown",
+          "parents": [
+            "Math",
+            "Science"
+          ],
+          "weights": {
+            "Math": 0.5128398473652369,
+            "Science": 0.48716015263476303
+          }
+        },
+        {
+          "id": "s71_unknown_07",
+          "role": "unknown",
+          "parents": [
+            "Code",
+            "Science"
+          ],
+          "weights": {
+            "Code": 0.5361518767453956,
+            "Science": 0.46384812325460445
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+.env
+*.log
+.DS_Store
+.idea/
+.vscode/
+
+# Large/derived model artifacts
+runs/
+checkpoints/
+models/
+hf_cache/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.gguf
+*.npz
+*.npy
+
+# Third-party/raw datasets
+raw_data/
+datasets_cache/
+wandb/

@@ -1,0 +1,7 @@
+# Copy to .env or export in your shell. Do not commit credentials.
+FAS_WORK_ROOT=/path/to/fast/workspace
+FAS_SHARED_ROOT=/path/to/shared/fas_workspace
+HF_HOME=/path/to/huggingface/cache
+HF_ENDPOINT=https://huggingface.co
+# Optional in restricted-network environments:
+# HF_ENDPOINT=https://hf-mirror.com

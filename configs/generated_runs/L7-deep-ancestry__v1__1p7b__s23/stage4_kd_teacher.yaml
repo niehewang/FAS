@@ -1,0 +1,14 @@
+mode: mixture
+seed: 23
+input_jsonl: data/distillation/pilot_prompts.jsonl
+output_jsonl: runs/teacher_data/L7-deep-ancestry__v1__1p7b__s23/deep_int4_responses.jsonl
+teachers:
+- name: DeepChainTeacherINT4
+  model: runs/checkpoints/L7-deep-ancestry__v1__1p7b__s23/deep_sft_full
+  weight: 1.0
+  load_in_4bit: true
+  bnb_4bit_quant_type: nf4
+  dtype: bfloat16
+generation:
+  max_new_tokens: 512
+  do_sample: false

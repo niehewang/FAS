@@ -1,0 +1,101 @@
+[
+  {
+    "seed": 23,
+    "original": {
+      "state": "Bank-Insufficient",
+      "parent_f1": 0.6666666666666666,
+      "relative_residual": 0.6862743638561185,
+      "signal_p": 0.024390243902439025,
+      "open_p": 0.024390243902439025,
+      "pi": [
+        0.25164992441771983,
+        0.4693110434149068,
+        0.08073813626202316,
+        0.19830089590535016
+      ]
+    },
+    "pair_shuffle": {
+      "state": "Bank-Insufficient",
+      "parent_f1": 0.6666666666666666,
+      "relative_residual": 0.8950853711428823,
+      "signal_p": 0.024390243902439025,
+      "open_p": 0.024390243902439025,
+      "pi": [
+        0.08999924244298467,
+        0.3907005167758391,
+        0.21135302390033564,
+        0.30794721688084054
+      ],
+      "collapsed": true
+    },
+    "label_permutation_mean_parent_f1": 0.6666666666666664,
+    "base_zero_signal_p": 1.0,
+    "base_zero_false_signal": false
+  },
+  {
+    "seed": 47,
+    "original": {
+      "state": "Decomposable",
+      "parent_f1": 0.6666666666666666,
+      "relative_residual": 0.632391083860584,
+      "signal_p": 0.024390243902439025,
+      "open_p": 0.5365853658536586,
+      "pi": [
+        0.2873528377423431,
+        0.5592955730218467,
+        0.05926978297707338,
+        0.09408180625873674
+      ]
+    },
+    "pair_shuffle": {
+      "state": "Bank-Insufficient",
+      "parent_f1": 0.6666666666666666,
+      "relative_residual": 0.85376174850916,
+      "signal_p": 0.024390243902439025,
+      "open_p": 0.024390243902439025,
+      "pi": [
+        0.08961473038097613,
+        0.5428652500646056,
+        0.19103774466380755,
+        0.1764822748906107
+      ],
+      "collapsed": true
+    },
+    "label_permutation_mean_parent_f1": 0.6666666666666664,
+    "base_zero_signal_p": 1.0,
+    "base_zero_false_signal": false
+  },
+  {
+    "seed": 71,
+    "original": {
+      "state": "Decomposable",
+      "parent_f1": 0.8,
+      "relative_residual": 0.6444177310991703,
+      "signal_p": 0.024390243902439025,
+      "open_p": 0.36585365853658536,
+      "pi": [
+        0.28487204860313636,
+        0.5209852711787436,
+        0.0,
+        0.19414268021811984
+      ]
+    },
+    "pair_shuffle": {
+      "state": "Bank-Insufficient",
+      "parent_f1": 0.5,
+      "relative_residual": 0.8493573507733473,
+      "signal_p": 0.024390243902439025,
+      "open_p": 0.024390243902439025,
+      "pi": [
+        0.08193409342814441,
+        0.681828436484142,
+        0.004831300742934429,
+        0.231406169344779
+      ],
+      "collapsed": true
+    },
+    "label_permutation_mean_parent_f1": 0.5913043478260872,
+    "base_zero_signal_p": 1.0,
+    "base_zero_false_signal": false
+  }
+]

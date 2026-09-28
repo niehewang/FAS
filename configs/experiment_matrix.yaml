@@ -1,0 +1,304 @@
+project: FAS-TPAMI
+version: 0.9
+seeds:
+- 11
+- 23
+- 47
+parents:
+- math
+- code
+- medical
+- science
+base_model: Qwen/Qwen3-4B-Base
+students:
+  1p7b: Qwen/Qwen3-1.7B-Base
+  0p6b: Qwen/Qwen3-0.6B-Base
+probe_budgets:
+- 8
+- 16
+- 32
+- 64
+- 128
+repeat_samples:
+- 1
+- 2
+- 4
+- 8
+- 16
+scenarios:
+- id: L1-linear-2p
+  family: merge
+  parent_count: 2
+  construction: linear
+  variants:
+  - parents:
+    - math
+    - code
+    weights:
+    - 0.5
+    - 0.5
+  - parents:
+    - math
+    - medical
+    weights:
+    - 0.3
+    - 0.7
+  - parents:
+    - code
+    - science
+    weights:
+    - 0.7
+    - 0.3
+  postprocess: []
+  ground_truth:
+  - structural
+  - construction
+- id: L2-ties-3p
+  family: merge
+  parent_count: 3
+  construction: ties
+  variants:
+  - parents:
+    - math
+    - code
+    - science
+    weights:
+    - 0.34
+    - 0.33
+    - 0.33
+  - parents:
+    - math
+    - medical
+    - science
+    weights:
+    - 0.2
+    - 0.5
+    - 0.3
+  postprocess: []
+  ground_truth:
+  - structural
+  - construction
+  implementation: mergekit
+- id: L3-dare-sft
+  family: merge_postprocess
+  parent_count: 3
+  construction: dare_ties
+  variants:
+  - parents:
+    - math
+    - code
+    - medical
+    weights:
+    - 0.4
+    - 0.35
+    - 0.25
+  - parents:
+    - code
+    - medical
+    - science
+    weights:
+    - 0.25
+    - 0.35
+    - 0.4
+  postprocess:
+  - auxiliary_sft
+  ground_truth:
+  - structural
+  - construction
+  implementation: mergekit
+- id: L4-merge-sft-int4
+  family: deep_transform
+  parent_count: 3
+  construction: dare_ties
+  variants:
+  - parents:
+    - math
+    - code
+    - science
+    weights:
+    - 0.4
+    - 0.3
+    - 0.3
+  postprocess:
+  - auxiliary_sft
+  - int4_inference
+  ground_truth:
+  - structural
+  - construction
+  implementation: mergekit
+- id: L5-mixture-kd
+  family: distillation
+  parent_count: 4
+  construction: mixture_kd
+  variants:
+  - parents:
+    - math
+    - code
+    - medical
+    - science
+    exposure:
+    - 0.25
+    - 0.25
+    - 0.25
+    - 0.25
+  - parents:
+    - math
+    - code
+    - medical
+    - science
+    exposure:
+    - 0.4
+    - 0.3
+    - 0.2
+    - 0.1
+  student_models:
+  - 1p7b
+  - 0p6b
+  postprocess: []
+  ground_truth:
+  - structural
+  - exposure
+  - counterfactual
+- id: L6-router-kd-sft
+  family: distillation
+  parent_count: 4
+  construction: router_kd
+  variants:
+  - parents:
+    - math
+    - code
+    - medical
+    - science
+    router: domain_oracle
+  student_models:
+  - 1p7b
+  postprocess:
+  - auxiliary_sft
+  ground_truth:
+  - structural
+  - domain_conditioned
+  - counterfactual
+- id: L7-deep-ancestry
+  family: deep_chain
+  parent_count: 3
+  construction: dare_ties
+  variants:
+  - parents:
+    - math
+    - code
+    - medical
+    weights:
+    - 0.4
+    - 0.35
+    - 0.25
+  postprocess:
+  - auxiliary_sft
+  - int4_inference
+  - response_kd
+  student_models:
+  - 1p7b
+  - 0p6b
+  ground_truth:
+  - structural
+  - construction
+  - trajectory
+  save_intermediate_stages: true
+  implementation: mergekit
+- id: L8-open-set
+  family: open_set
+  parent_count: 3
+  construction: mixed
+  variants:
+  - name: known_only
+    known_parents:
+    - math
+    - code
+    - medical
+    unseen_parents: []
+  - name: unknown_A
+    known_parents:
+    - math
+    - code
+    unseen_parents:
+    - external_unseen
+  - name: unknown_B_heavy_transform
+    known_parents:
+    - math
+    - code
+    - medical
+    unseen_parents: []
+    postprocess:
+    - auxiliary_sft
+    - response_kd
+  postprocess: []
+  ground_truth:
+  - bank_sufficiency
+functional_validity:
+  parents:
+  - math
+  - code
+  - medical
+  subsets:
+  - []
+  - - math
+  - - code
+  - - medical
+  - - math
+    - code
+  - - math
+    - medical
+  - - code
+    - medical
+  - - math
+    - code
+    - medical
+  utility_domains:
+  - math
+  - code
+  - medical
+  - macro
+calibration_protocol:
+  cal_signal:
+    control_families:
+    - bf16_base_episodes
+    - int8_base_episodes
+    - int4_base_episodes
+    - no_task_delta_adapter_controls
+    planned_scores: 40
+    unit: independent audit episodes / transformation-matched null controls
+  cal_support:
+    heldout_known_compositions: 24
+  cal_open:
+    candidate_bank_complete_descendants: 50
+    target_retained_signal_pass_scores: 40
+    transformation_families:
+    - adapter_merge
+    heavy_shift_families:
+    - task_vector_merge
+    - merge_sft_light
+    - quant_kd
+    - deep_chain
+    note: G0 finite-sample calibration uses executable weighted-adapter composition
+      only; task-vector/SFT/KD/deep-chain are transfer/shift tests unless separately
+      matched-calibrated.
+  alphas:
+    main: 0.05
+    sensitivity:
+    - 0.1
+    optional_0p01_requires_n_ge: 100
+negative_controls:
+  genealogy_label_permutations: 2000
+  probe_pair_shuffle:
+    enabled: true
+    within_domain: true
+  low_signal_alphas:
+  - 0.05
+  - 0.1
+  optional_alpha_0p01_requires_n_ge: 100
+bootstrap:
+  representative_settings:
+  - clean_merge
+  - multi_teacher_kd
+  - deep_chain
+  n_boot: 1000
+  support_frequency_threshold: 0.8

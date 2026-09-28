@@ -1,0 +1,70 @@
+{
+  "stage": "g0_matched_calibration_deterministic_v1",
+  "seeds": [
+    23,
+    47,
+    71
+  ],
+  "g0_calibration_complete": true,
+  "cal_signal_n_per_seed": 40,
+  "cal_support_n_per_seed": 24,
+  "cal_open_n_per_seed": 40,
+  "support_thresholds": [
+    0.01,
+    0.01,
+    0.15
+  ],
+  "summary": {
+    "L1-linear-2p": {
+      "states": [
+        "Decomposable",
+        "Decomposable",
+        "Decomposable"
+      ],
+      "decomposable_rate": 1.0,
+      "mean_end_to_end_parent_f1": 0.7111111111111111,
+      "mean_false_parent_leakage": 0.1802051565454427,
+      "mean_true_parent_mass": 0.8197948434545573,
+      "signal_p_values": [
+        0.024390243902439025,
+        0.024390243902439025,
+        0.024390243902439025
+      ],
+      "open_p_values": [
+        0.07317073170731707,
+        0.43902439024390244,
+        0.1951219512195122
+      ],
+      "calibration_regimes": [
+        "matched_g0_finite_sample"
+      ]
+    },
+    "L2-ties-3p": {
+      "states": [
+        "Decomposable",
+        "Decomposable",
+        "Decomposable"
+      ],
+      "decomposable_rate": 1.0,
+      "mean_end_to_end_parent_f1": 0.8571428571428571,
+      "mean_false_parent_leakage": 0.1660796906559188,
+      "mean_true_parent_mass": 0.8339203093440813,
+      "signal_p_values": [
+        0.024390243902439025,
+        0.024390243902439025,
+        0.024390243902439025
+      ],
+      "open_p_values": [
+        0.6585365853658537,
+        0.5609756097560976,
+        0.6585365853658537
+      ],
+      "calibration_regimes": [
+        "g1_transfer_diagnostic_no_finite_sample_claim"
+      ]
+    }
+  },
+  "paper_result_ready": false,
+  "reason_not_ready": "G0 calibration is now available, but strong baselines, KD/deep-chain, open-set held-out coverage, functional validity and remaining claim gates are not yet complete.",
+  "next_stage": "strong-baseline gate plus L5 mixture-KD under frozen deterministic measurement; retain G0 finite-sample guarantee only for matched weighted-adapter family."
+}

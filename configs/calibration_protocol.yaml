@@ -1,0 +1,56 @@
+version: 0.9
+splits:
+  cal_signal:
+    purpose: low-signal noise floor only
+    allowed:
+    - base_repeats
+    - base_quantized
+    - no_task_delta_controls
+    planned_n: 40
+    unit: audit_episode_or_transformation_matched_null_control
+  cal_support:
+    purpose: choose support threshold tau_pi
+    allowed:
+    - bank_complete_known_compositions
+    planned_n: 24
+  cal_open:
+    purpose: conformal bank-sufficiency residual null conditional on Low-Signal pass
+    allowed:
+    - bank_complete_weighted_adapter_compositions
+    filtering: apply fixed independent cal_signal gate first; retain only signal-pass
+      descendants
+    planned_n: 40
+    planned_n_semantics: retained_signal_pass_scores
+    candidate_pool_n: 50
+    default_generator: randomized weighted-LoRA adapter compositions from G0; heavy
+      SFT/task-vector/KD/deep-chain settings are G1 calibration-shift tests unless
+      separately matched
+  test:
+    purpose: final reporting only
+constraints:
+  model_level_disjoint: true
+  no_threshold_tuning_on_test: true
+  no_reuse_across_calibration_roles: true
+alphas:
+  signal:
+    main:
+    - 0.05
+    sensitivity:
+    - 0.1
+    optional:
+    - 0.01
+  open:
+    main:
+    - 0.05
+    sensitivity:
+    - 0.1
+    optional:
+    - 0.01
+notes:
+  conformal_resolution: For a +1 rank p-value, the minimum attainable p is 1/(n+1).
+    Main claims use alpha=0.05 with n=40. Alpha=0.01 is optional and is enabled only
+    when n>=100 exchangeable scores are actually available.
+  cost_control: cal-open G0 is generated from cheap randomized weighted-adapter compositions.
+    Expensive SFT/KD/deep-chain descendants are not required for the main matched-calibration
+    guarantee and remain shift stress tests unless a dedicated matched calibration
+    set is built.

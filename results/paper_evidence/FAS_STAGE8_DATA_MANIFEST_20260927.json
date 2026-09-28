@@ -1,0 +1,34 @@
+{
+  "seed": 20260927,
+  "source": "${FAS_SHARED_ROOT}/stage1_v3/project/runs/fas_stage8_deep_ancestry_matchedscale_v1/holdout_2000.jsonl",
+  "domains": {
+    "math": {
+      "candidate_n": 500,
+      "aux_n": 100,
+      "kd_n": 250,
+      "unused_n": 150
+    },
+    "code": {
+      "candidate_n": 500,
+      "aux_n": 100,
+      "kd_n": 250,
+      "unused_n": 150
+    },
+    "medical": {
+      "candidate_n": 500,
+      "aux_n": 100,
+      "kd_n": 250,
+      "unused_n": 150
+    },
+    "science": {
+      "candidate_n": 500,
+      "aux_n": 100,
+      "kd_n": 250,
+      "unused_n": 150
+    }
+  },
+  "aux_total": 400,
+  "kd_total": 1000,
+  "aux_sha256": "65b5f7096feaa931ef5ae4eb87f0d3a135f63ee0dabed7c37034bdb1a232b389",
+  "kd_sha256": "22b9bd07f7179ec42ee75b48c2f5803344258ea85081a9cdf5841bfb46d9eb7c"
+}

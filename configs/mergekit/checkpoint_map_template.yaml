@@ -1,0 +1,9 @@
+# Copy to a machine-local file and resolve these after sibling LoRAs are materialized.
+base_model: Qwen/Qwen3-4B-Base
+checkpoints:
+  math: ${FAS_RUNS}/experts/math/full
+  code: ${FAS_RUNS}/experts/code/full
+  medical: ${FAS_RUNS}/experts/medical/full
+  science: ${FAS_RUNS}/experts/science/full
+density: 0.5
+dtype: bfloat16

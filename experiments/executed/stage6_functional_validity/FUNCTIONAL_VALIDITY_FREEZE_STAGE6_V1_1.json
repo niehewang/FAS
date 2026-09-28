@@ -1,0 +1,19 @@
+{
+  "protocol": "FAS_STAGE6_FUNCTIONAL_VALIDITY_EXACT_SHAPLEY_V1_1",
+  "status": "frozen_before_any_stage6_model_evaluation",
+  "amendment_reason": "Stage6 v1 exited at preflight (exit_code=21) because legacy pilot_utility.jsonl was not part of the formal Stage1 freeze. No Stage6 model was evaluated and no scientific outcome was observed.",
+  "scientific_design_change": "none to seeds, descendants, Shapley game, FAS measurement, comparators, metrics, or C4 gate",
+  "data_fix": "Construct a new deterministic 96-item/domain utility set from the exact benchmark repositories and immutable revisions already frozen by Stage1, exclude every formal probe-seed example by stable seed_id, and exclude exact/high-overlap examples against the final 3000-example/domain formal training corpora using the Stage1 contamination thresholds (8-gram, Jaccard 0.45, containment 0.70).",
+  "utility_domains": ["Math", "Medical", "Science"],
+  "utility_scoring": {"Math": "simple numeric/fraction final answer from held-out MATH test", "Medical": "PubMedQA yes/no/maybe", "Science": "ARC option letter"},
+  "seeds": [23, 47, 71],
+  "parents": ["Math", "Medical", "Science"],
+  "candidate_bank": ["Math", "Code", "Medical", "Science"],
+  "full_descendant_weights": {"Math": 0.2, "Medical": 0.5, "Science": 0.3},
+  "counterfactual_game": "exact 2^3 fixed-coefficient subsets; deleted parent coefficient is set to zero without renormalization",
+  "fas_measurement": {"probe_pool": "frozen formal interventions.jsonl", "encoder": "sentence-transformers/all-mpnet-base-v2", "probe_selection": "domain-conditioned active log-det B=32", "decode": "greedy deterministic max_new_tokens=96", "normalization": "v0.11 global ancestor-column norms"},
+  "comparators": ["fixed construction share", "Absolute Output + NNLS", "domain-conditioned FAS coordinates"],
+  "primary_metric": "Spearman rho across the three true parents between each quantity and exact Shapley value in each seed x domain cell; aggregate across 9 cells",
+  "frozen_C4_gate_unchanged": {"mean_spearman_fas_minus_construction_min": 0.10, "fas_win_or_tie_cells_vs_construction_min": 6, "mean_fas_spearman_min": 0.0},
+  "guardrails": ["Seed11 excluded from formal evidence.", "No expert retraining.", "Stage6 v1 preflight failure is not a scientific result.", "Utility holdout is sample-disjoint from the frozen probe seed pool and contamination-screened against final training corpora.", "Stage5 cross-scale C3 remains downgraded and is not repaired by Stage6."]
+}

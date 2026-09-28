@@ -1,0 +1,4 @@
+{"probe_id":"math_value_0001","domain":"math","type":"value","base_query":"[填写基础数学问题]","edited_query":"[只改变一个数值后的问题]","changed_factor":"value","source":"manual_or_dataset","notes":"保持其他条件不变"}
+{"probe_id":"code_constraint_0001","domain":"code","type":"constraint","base_query":"[填写基础编程问题]","edited_query":"[只改变一个约束后的问题]","changed_factor":"constraint","source":"manual_or_dataset","notes":"保持 API/语言/任务目标不变"}
+{"probe_id":"medical_entity_0001","domain":"medical","type":"entity","base_query":"[填写基础医学问题]","edited_query":"[只替换一个实体后的问题]","changed_factor":"entity","source":"manual_or_dataset","notes":"避免改变多个临床因素"}
+{"probe_id":"science_relation_0001","domain":"science","type":"relation","base_query":"[填写基础科学问题]","edited_query":"[只反转一个关系后的问题]","changed_factor":"relation","source":"manual_or_dataset","notes":"检查语义仍自然"}

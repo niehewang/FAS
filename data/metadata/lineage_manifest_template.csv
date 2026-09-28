@@ -1,0 +1,7 @@
+model_id,role,base_model,parents,composition,construction_weights,postprocess,checkpoint_or_api,seed,license,notes
+qwen3_base,base,,,,,,,[seed],Apache-2.0,
+math_expert,ancestor,qwen3_base,,LoRA,,, [path],0,[license],
+code_expert,ancestor,qwen3_base,,LoRA,,, [path],1,[license],
+medical_expert,ancestor,qwen3_base,,LoRA,,, [path],2,[license],
+science_expert,ancestor,qwen3_base,,LoRA,,, [path],3,[license],
+merge_abc,descendant,qwen3_base,"math_expert|code_expert|medical_expert",TIES,"0.34|0.33|0.33",none,[path],10,[derived license],

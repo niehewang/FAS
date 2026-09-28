@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use FAS in your research, please cite the corresponding IEEE TPAMI paper."
+title: "FAS: Functional Ancestry Simplex for Black-Box Multi-Parent Functional Ancestry Decomposition"
+type: software
+version: 1.0.0
+date-released: 2026-09-28
+authors:
+  - family-names: Nie
+    given-names: Hewang
+  - family-names: Xiao
+    given-names: Jue
+  - family-names: Lu
+    given-names: Zhi
+  - family-names: Shen
+    given-names: Renfei
+  - family-names: Tang
+    given-names: Zhenjun
+keywords:
+  - model provenance
+  - model lineage
+  - functional ancestry
+  - black-box auditing
+  - foundation models
+  - active probing
+license: MIT

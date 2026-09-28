@@ -1,0 +1,83 @@
+{
+  "project": "FAS / Functional Ancestry Signatures",
+  "target": "IEEE TPAMI",
+  "date": "2026-09-26",
+  "mother_latex": "FAS_TPAMI_Chinese_Draft_v0.11.zip",
+  "current_stage": "Stage6 v1.1 Functional Validity / Exact Counterfactual Shapley",
+  "stage5h_status": "cancelled_obsolete_do_not_run",
+  "claims": {
+    "C1_active_identifiability": "supported",
+    "C2_multi_parent_recovery": "supported_with_conservative_wording_absolute_competitive",
+    "C3_cross_scale_kd": "not_supported_for_tested_recipe_boundary_result",
+    "C4_functional_validity": "pending_stage6_v1_1",
+    "C5_matched_calibration": "supported_matched_G0_only",
+    "C6_evaluator_controls": "pending_stage7",
+    "C7_cross_modality": "optional",
+    "C8_open_set_selective": "pending_stage7",
+    "deep_ancestry": "pending_stage8_matched_family"
+  },
+  "stage3": {
+    "L1_fas_parent_f1_active": 0.7111,
+    "L1_fas_parent_f1_random": 0.7022,
+    "L2_fas_parent_f1_active": 0.8571,
+    "L2_fas_parent_f1_random": 0.8190,
+    "sigma_min_active": 0.5955,
+    "sigma_min_random": 0.5144,
+    "condition_active": 2.7127,
+    "condition_random": 3.2656,
+    "absolute_active_parent_f1_L1": 0.7778,
+    "absolute_active_parent_f1_L2": 0.8667
+  },
+  "stage4": {
+    "matched_G0_mean_parent_f1": 0.7111,
+    "matched_G0_mean_leakage": 0.1802,
+    "signal_p": 0.02439,
+    "open_p": [0.07317, 0.43902, 0.19512]
+  },
+  "stage5": {
+    "active_fas_residual": 0.9681987251003877,
+    "random_fas_residual": 0.9474828363083855,
+    "active_fas_parent_f1": 0.0,
+    "random_fas_parent_f1": 0.0,
+    "active_absolute_parent_f1": 0.5777777777777778,
+    "random_absolute_parent_f1": 0.7936507936507936,
+    "dna_decomp_mean_parent_f1": 0.26666666666666666,
+    "C3_supported": false
+  },
+  "stage5F_scale_matched_diagnostic": {
+    "pooled_cross_scale_residual": 0.9578407807043866,
+    "pooled_same_scale_residual": 0.6744270026082212,
+    "pooled_improvement": 0.2834137780961654,
+    "role": "diagnostic_surrogate_not_genealogical_evidence"
+  },
+  "stage5G_bridge": {
+    "raw_residual": 0.9578407807043866,
+    "bridge_residual": 0.9571037034701559,
+    "same_scale_oracle_residual": 0.6744270026082212,
+    "oracle_gap_recovered": 0.0026007106612084547,
+    "field_cosine_improvement": -0.015488675130218668,
+    "gate_pass": false
+  },
+  "stage6_v1": {
+    "exit_code": 21,
+    "stage": "preflight",
+    "scientific_result": false,
+    "reason": "legacy pilot_utility.jsonl was not part of the formal Stage1 server freeze"
+  },
+  "stage6_v1_1_freeze": {
+    "parents": ["Math", "Medical", "Science"],
+    "weights": {"Math": 0.2, "Medical": 0.5, "Science": 0.3},
+    "seeds": [23, 47, 71],
+    "game": "exact_fixed_coefficient_2^3",
+    "utility_items_per_domain": 96,
+    "utility_data": "exact Stage1 source revisions; formal-probe sample exclusion; final-training contamination screen",
+    "active_budget_per_domain": 32,
+    "gate_unchanged": {
+      "mean_fas_minus_construction_spearman_min": 0.10,
+      "fas_win_or_tie_cells_min": 6,
+      "mean_fas_spearman_min": 0.0
+    }
+  },
+  "remaining_scientific_blocks": ["Stage6 functional validity", "Stage7 evaluator/open-set selective audit", "Stage8 matched-family deep ancestry"],
+  "final_rule": "After Stage8, stop expanding experiments and integrate all verified results into the complete v0.11 LaTeX mother project."
+}

@@ -1,0 +1,14 @@
+mode: mixture
+seed: 23
+input_jsonl: data/distillation/pilot_prompts.jsonl
+output_jsonl: runs/deep_chain/deepteacher_f0f968b86d90/int4_responses.jsonl
+teachers:
+- name: DeepChainTeacherINT4
+  model: runs/deep_chain/deepteacher_f0f968b86d90/sft_full
+  weight: 1.0
+  load_in_4bit: true
+  bnb_4bit_quant_type: nf4
+  dtype: bfloat16
+generation:
+  max_new_tokens: 512
+  do_sample: false

@@ -1,0 +1,28 @@
+{
+  "protocol_id": "FAS_STAGE5E_SCALEMATCHED17_PILOT_V1",
+  "status": "post_stage5_diagnostic_not_confirmatory_claim_test",
+  "purpose": "Test whether Stage5 failure is primarily cross-scale dictionary/centering mismatch by constructing a scale-matched 1.7B surrogate ancestry field for seed 23 only.",
+  "seed": 23,
+  "target": "existing Stage5 seed-23 Qwen3-1.7B Mixture-KD student; no student retraining",
+  "surrogate_experts": {
+    "base_model": "Qwen/Qwen3-1.7B-Base",
+    "domains": ["Math", "Code", "Medical", "Science"],
+    "training_rows_per_domain": 3000,
+    "data": "exact frozen formal domain training JSONL used for the original controlled experts",
+    "recipe": "same v0.11 QLoRA recipe: r16 alpha32 dropout0.05, all Q/K/V/O and MLP projections, 1 epoch, batch1 x grad_accum16, lr2e-4, cosine, prompt-masked response loss"
+  },
+  "measurement": "existing deterministic Stage5 seed-23 Active-B32 and Random-B32 union, greedy max_new_tokens=96, all-mpnet-base-v2",
+  "pilot_gate": {
+    "same_scale_mean_residual_max": 0.80,
+    "mean_improvement_vs_cross_scale_min": 0.15,
+    "per_strategy_improvement_min": 0.10,
+    "action_if_pass": "expand only this diagnostic to seeds 47 and 71 before any L7 run",
+    "action_if_fail": "do not train the remaining surrogate experts; revise IFRF/cross-scale representation before L7"
+  },
+  "guardrails": [
+    "The scale-matched 1.7B experts are diagnostic surrogates and are not the true genealogical 4B teachers.",
+    "No support threshold or conformal guarantee from Stage4 is claimed for this G1 diagnostic.",
+    "Do not tune on KD target responses beyond applying the frozen pilot branch rule.",
+    "Do not modify Stage1-5 original run roots or results."
+  ]
+}

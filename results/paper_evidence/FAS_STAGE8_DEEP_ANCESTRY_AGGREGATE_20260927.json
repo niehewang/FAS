@@ -1,0 +1,173 @@
+{
+  "protocol": "FAS_STAGE8_DEEP_ANCESTRY_MATCHEDSCALE_V1",
+  "seeds": [
+    23,
+    47,
+    71
+  ],
+  "summary": {
+    "D1_merge": {
+      "active": {
+        "fas": {
+          "n": 3,
+          "parent_f1": 0.7936507936507936,
+          "true_parent_mass": 0.7501012522285753,
+          "relative_residual": 0.5846175503192393,
+          "top3_overlap_fraction": 0.6666666666666666,
+          "decomposable_rate_transfer_diagnostic": 1.0
+        },
+        "absolute": {
+          "n": 3,
+          "parent_f1": 0.9047619047619048,
+          "true_parent_mass": 0.8186112576915899,
+          "relative_residual": 0.5655811878114648,
+          "top3_overlap_fraction": 0.7777777777777777,
+          "decomposable_rate_transfer_diagnostic": 1.0
+        }
+      },
+      "random": {
+        "fas": {
+          "n": 3,
+          "parent_f1": 0.8571428571428571,
+          "true_parent_mass": 0.7749103908039409,
+          "relative_residual": 0.5853256932101728,
+          "top3_overlap_fraction": 0.6666666666666666,
+          "decomposable_rate_transfer_diagnostic": 1.0
+        },
+        "absolute": {
+          "n": 3,
+          "parent_f1": 0.8571428571428571,
+          "true_parent_mass": 0.7927780014479683,
+          "relative_residual": 0.5451947759601782,
+          "top3_overlap_fraction": 0.7777777777777777,
+          "decomposable_rate_transfer_diagnostic": 1.0
+        }
+      }
+    },
+    "D2_sft": {
+      "active": {
+        "fas": {
+          "n": 3,
+          "parent_f1": 0.8571428571428571,
+          "true_parent_mass": 0.7843515368855724,
+          "relative_residual": 0.6576185380179654,
+          "top3_overlap_fraction": 0.7777777777777777,
+          "decomposable_rate_transfer_diagnostic": 1.0
+        },
+        "absolute": {
+          "n": 3,
+          "parent_f1": 0.9047619047619048,
+          "true_parent_mass": 0.8298746974400862,
+          "relative_residual": 0.7362536734890228,
+          "top3_overlap_fraction": 0.8888888888888888,
+          "decomposable_rate_transfer_diagnostic": 1.0
+        }
+      },
+      "random": {
+        "fas": {
+          "n": 3,
+          "parent_f1": 0.8571428571428571,
+          "true_parent_mass": 0.8167610534783623,
+          "relative_residual": 0.6495548258754064,
+          "top3_overlap_fraction": 0.6666666666666666,
+          "decomposable_rate_transfer_diagnostic": 1.0
+        },
+        "absolute": {
+          "n": 3,
+          "parent_f1": 0.7936507936507936,
+          "true_parent_mass": 0.7992229587107857,
+          "relative_residual": 0.7229763422923923,
+          "top3_overlap_fraction": 0.7777777777777777,
+          "decomposable_rate_transfer_diagnostic": 1.0
+        }
+      }
+    },
+    "D3_int4": {
+      "active": {
+        "fas": {
+          "n": 3,
+          "parent_f1": 0.8571428571428571,
+          "true_parent_mass": 0.7860932881633426,
+          "relative_residual": 0.7045940018756167,
+          "top3_overlap_fraction": 0.6666666666666666,
+          "decomposable_rate_transfer_diagnostic": 0.3333333333333333
+        },
+        "absolute": {
+          "n": 3,
+          "parent_f1": 0.8571428571428571,
+          "true_parent_mass": 0.8306165002557432,
+          "relative_residual": 0.7797806134677899,
+          "top3_overlap_fraction": 0.8888888888888888,
+          "decomposable_rate_transfer_diagnostic": 0.3333333333333333
+        }
+      },
+      "random": {
+        "fas": {
+          "n": 3,
+          "parent_f1": 0.8571428571428571,
+          "true_parent_mass": 0.807991465675378,
+          "relative_residual": 0.6936374350267144,
+          "top3_overlap_fraction": 0.7777777777777777,
+          "decomposable_rate_transfer_diagnostic": 0.3333333333333333
+        },
+        "absolute": {
+          "n": 3,
+          "parent_f1": 0.9047619047619048,
+          "true_parent_mass": 0.8455783918456632,
+          "relative_residual": 0.7363479549514499,
+          "top3_overlap_fraction": 0.8888888888888888,
+          "decomposable_rate_transfer_diagnostic": 0.3333333333333333
+        }
+      }
+    },
+    "D4_kd4b": {
+      "active": {
+        "fas": {
+          "n": 3,
+          "parent_f1": 0.7936507936507936,
+          "true_parent_mass": 0.7453294354350112,
+          "relative_residual": 0.7105572346295901,
+          "top3_overlap_fraction": 0.6666666666666666,
+          "decomposable_rate_transfer_diagnostic": 0.6666666666666666
+        },
+        "absolute": {
+          "n": 3,
+          "parent_f1": 0.8571428571428571,
+          "true_parent_mass": 0.7038441012704171,
+          "relative_residual": 0.7614121490465303,
+          "top3_overlap_fraction": 0.6666666666666666,
+          "decomposable_rate_transfer_diagnostic": 0.6666666666666666
+        }
+      },
+      "random": {
+        "fas": {
+          "n": 3,
+          "parent_f1": 0.8380952380952381,
+          "true_parent_mass": 0.826041617182966,
+          "relative_residual": 0.7351157348153956,
+          "top3_overlap_fraction": 0.7777777777777777,
+          "decomposable_rate_transfer_diagnostic": 0.0
+        },
+        "absolute": {
+          "n": 3,
+          "parent_f1": 0.7936507936507936,
+          "true_parent_mass": 0.7759814311877465,
+          "relative_residual": 0.7723563936777853,
+          "top3_overlap_fraction": 0.7777777777777777,
+          "decomposable_rate_transfer_diagnostic": 0.0
+        }
+      }
+    }
+  },
+  "gate": {
+    "D4_active_mean_parent_f1": 0.7936507936507936,
+    "D4_active_mean_true_parent_mass": 0.7453294354350112,
+    "D4_active_mean_relative_residual": 0.7105572346295901,
+    "D4_active_f1_retention_vs_D1": 0.99999999999874,
+    "D4_active_seeds_parent_f1_ge_0p60": 3,
+    "pass": true
+  },
+  "claim_if_pass": "Deep functional ancestry remains meaningfully recoverable through a matched-scale Merge->SFT->INT4->KD chain; this is a same-family depth claim only.",
+  "claim_if_fail": "Deep ancestry degrades materially under the tested chain; report the trajectory as a boundary result and do not make a broad deep-lineage claim.",
+  "cross_scale_C3": "closed regardless of Stage8"
+}

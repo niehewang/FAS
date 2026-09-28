@@ -1,0 +1,2 @@
+target_id,target_npz,true_support,true_pi,setting,seed
+linear_math_code_5050,runs/responses/targets/linear_math_code_5050.npz,Math;Code,"[0.5,0.5,0,0]",clean,11

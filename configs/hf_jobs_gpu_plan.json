@@ -1,0 +1,16 @@
+{
+  "smoke": {
+    "flavor": "t4-small",
+    "timeout": "20m",
+    "stage": "smoke",
+    "estimated_max_cost_usd_at_timeout": 0.14
+  },
+  "formal_seed": {
+    "flavor": "a100-large",
+    "timeout": "4h",
+    "stage": "clean_kd",
+    "estimated_max_cost_usd_at_timeout": 10.0,
+    "seeds": [11, 23, 47]
+  },
+  "note": "HF Jobs bills by the minute. These are timeout caps, not expected costs. Paid jobs must not be launched without explicit author authorization."
+}

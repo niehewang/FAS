@@ -1,0 +1,57 @@
+version: 1
+sampling_seed: 20260922
+per_domain: 400
+sources:
+  math:
+    domain_label: Math
+    dataset: EleutherAI/hendrycks_math
+    configs: [algebra, counting_and_probability, geometry, intermediate_algebra, number_theory, prealgebra, precalculus]
+    split: test
+    expected_license: mit
+    transform: hendrycks_math
+    source_url: https://huggingface.co/datasets/EleutherAI/hendrycks_math
+
+  code_humaneval:
+    domain_label: Code
+    dataset: openai/openai_humaneval
+    config_name: openai_humaneval
+    split: test
+    expected_license: mit
+    transform: humaneval
+    source_url: https://huggingface.co/datasets/openai/openai_humaneval
+
+  code_mbppplus:
+    domain_label: Code
+    dataset: evalplus/mbppplus
+    config_name: null
+    split: test
+    expected_license: apache-2.0
+    transform: mbppplus
+    source_url: https://huggingface.co/datasets/evalplus/mbppplus
+
+  medical:
+    domain_label: Medical
+    dataset: qiaojin/PubMedQA
+    config_name: pqa_labeled
+    split: train
+    expected_license: mit
+    transform: pubmedqa
+    source_url: https://huggingface.co/datasets/qiaojin/PubMedQA
+
+  science_easy:
+    domain_label: Science
+    dataset: allenai/ai2_arc
+    config_name: ARC-Easy
+    split: test
+    expected_license: cc-by-sa-4.0
+    transform: arc
+    source_url: https://huggingface.co/datasets/allenai/ai2_arc
+
+  science_challenge:
+    domain_label: Science
+    dataset: allenai/ai2_arc
+    config_name: ARC-Challenge
+    split: test
+    expected_license: cc-by-sa-4.0
+    transform: arc
+    source_url: https://huggingface.co/datasets/allenai/ai2_arc

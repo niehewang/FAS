@@ -1,0 +1,24 @@
+mode: mixture
+seed: 47
+input_jsonl: data/distillation/pilot_prompts.jsonl
+output_jsonl: runs/teacher_data_shared/l5teacher_56e3386f8552/responses.jsonl
+teachers:
+- name: Math
+  base: Qwen/Qwen3-4B-Base
+  adapter: runs/experts/s47/math/adapter
+  weight: 0.4
+- name: Code
+  base: Qwen/Qwen3-4B-Base
+  adapter: runs/experts/s47/code/adapter
+  weight: 0.3
+- name: Medical
+  base: Qwen/Qwen3-4B-Base
+  adapter: runs/experts/s47/medical/adapter
+  weight: 0.2
+- name: Science
+  base: Qwen/Qwen3-4B-Base
+  adapter: runs/experts/s47/science/adapter
+  weight: 0.1
+generation:
+  max_new_tokens: 512
+  do_sample: false

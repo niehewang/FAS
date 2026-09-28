@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+import argparse,yaml
+from pathlib import Path
+ap=argparse.ArgumentParser();ap.add_argument('--model',required=True);ap.add_argument('--seed',type=int,required=True);ap.add_argument('--data',required=True);ap.add_argument('--output-dir',required=True);ap.add_argument('--config',required=True);ap.add_argument('--lr',type=float,required=True);ap.add_argument('--domain',default='DeepChain');ap.add_argument('--resume');a=ap.parse_args()
+c={'model_name':a.model,'domain':a.domain,'output_dir':a.output_dir,'seed':a.seed,'trust_remote_code':True,'torch_dtype':'bfloat16','qlora_4bit':True,'bnb_4bit_quant_type':'nf4','bnb_compute_dtype':'bfloat16','bnb_double_quant':True,'gradient_checkpointing':True,'max_seq_length':2048,'data':{'path':a.data,'split':'train','prompt_field':'prompt','response_field':'response','mask_prompt_loss':True,'use_chat_template':False,'template':'{prompt}\n{response}'},'lora':{'r':16,'alpha':32,'dropout':0.05,'bias':'none','target_modules':['q_proj','k_proj','v_proj','o_proj','gate_proj','up_proj','down_proj']},'training':{'epochs':1.0,'max_steps':-1,'batch_size':1,'grad_accum':16,'learning_rate':a.lr,'weight_decay':0.0,'warmup_ratio':0.03,'lr_scheduler':'cosine','logging_steps':10,'save_strategy':'steps','save_steps':100,'save_total_limit':2,'bf16':True,'fp16':False,'report_to':'none'}}
+if a.resume:c['resume_from_checkpoint']=a.resume
+Path(a.config).parent.mkdir(parents=True,exist_ok=True);Path(a.config).write_text(yaml.safe_dump(c,sort_keys=False),encoding='utf-8')

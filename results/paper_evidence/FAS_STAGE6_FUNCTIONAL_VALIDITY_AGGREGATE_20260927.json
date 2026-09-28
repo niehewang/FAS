@@ -1,0 +1,550 @@
+{
+  "protocol": "FAS_STAGE6_FUNCTIONAL_VALIDITY_EXACT_SHAPLEY_V1",
+  "cells": [
+    {
+      "seed": 23,
+      "domain": "Math",
+      "shapley": {
+        "Math": -0.0017361111111111084,
+        "Medical": -0.0017361111111111084,
+        "Science": -0.017361111111111112
+      },
+      "leave_one_out": {
+        "Math": 0.010416666666666664,
+        "Medical": 0.010416666666666664,
+        "Science": -0.010416666666666671
+      },
+      "utility_empty": 0.08333333333333333,
+      "utility_full": 0.0625,
+      "shapley_efficiency_residual": 0.0,
+      "quantities": {
+        "Merge weights": {
+          "Math": 0.2,
+          "Medical": 0.5,
+          "Science": 0.3
+        },
+        "Absolute-output decomposition": {
+          "Math": 0.8256921985597409,
+          "Medical": 0.0,
+          "Science": 0.1677147630111897
+        },
+        "FAS coordinates": {
+          "Math": 0.01676248114440575,
+          "Medical": 0.0,
+          "Science": 0.0
+        }
+      },
+      "spearman_shapley": {
+        "Merge weights": 0.0,
+        "Absolute-output decomposition": 0.0,
+        "FAS coordinates": 0.5000000000000001
+      },
+      "spearman_loo": {
+        "Merge weights": 0.0,
+        "Absolute-output decomposition": 0.0,
+        "FAS coordinates": 0.5000000000000001
+      },
+      "top_shapley_parent": "Math",
+      "top_parent_by_quantity": {
+        "Merge weights": "Medical",
+        "Absolute-output decomposition": "Math",
+        "FAS coordinates": "Math"
+      },
+      "fas_false_candidate_code_mass": 0.9832375188552938,
+      "absolute_false_candidate_code_mass": 0.006593038428927961,
+      "fas_relative_residual": 0.9952510290469553,
+      "absolute_relative_residual": 0.9679474310872969
+    },
+    {
+      "seed": 23,
+      "domain": "Medical",
+      "shapley": {
+        "Math": 0.055555555555555566,
+        "Medical": 0.10763888888888887,
+        "Science": 0.013888888888888874
+      },
+      "leave_one_out": {
+        "Math": 0.05208333333333337,
+        "Medical": 0.16666666666666669,
+        "Science": 0.0
+      },
+      "utility_empty": 0.4479166666666667,
+      "utility_full": 0.625,
+      "shapley_efficiency_residual": -2.7755575615628914e-17,
+      "quantities": {
+        "Merge weights": {
+          "Math": 0.2,
+          "Medical": 0.5,
+          "Science": 0.3
+        },
+        "Absolute-output decomposition": {
+          "Math": 0.0,
+          "Medical": 0.7801028901778955,
+          "Science": 0.0
+        },
+        "FAS coordinates": {
+          "Math": 0.0,
+          "Medical": 0.619616377934155,
+          "Science": 0.17239969201834268
+        }
+      },
+      "spearman_shapley": {
+        "Merge weights": 0.5,
+        "Absolute-output decomposition": 0.8660254037844387,
+        "FAS coordinates": 0.5
+      },
+      "spearman_loo": {
+        "Merge weights": 0.5,
+        "Absolute-output decomposition": 0.8660254037844387,
+        "FAS coordinates": 0.5
+      },
+      "top_shapley_parent": "Medical",
+      "top_parent_by_quantity": {
+        "Merge weights": "Medical",
+        "Absolute-output decomposition": "Medical",
+        "FAS coordinates": "Medical"
+      },
+      "fas_false_candidate_code_mass": 0.2079839300474676,
+      "absolute_false_candidate_code_mass": 0.2198971098220261,
+      "fas_relative_residual": 0.7697861950339474,
+      "absolute_relative_residual": 0.8724096456830956
+    },
+    {
+      "seed": 23,
+      "domain": "Science",
+      "shapley": {
+        "Math": 0.015624999999999981,
+        "Medical": 0.015624999999999981,
+        "Science": 0.010416666666666666
+      },
+      "leave_one_out": {
+        "Math": 0.0,
+        "Medical": 0.0,
+        "Science": -0.01041666666666663
+      },
+      "utility_empty": 0.8645833333333334,
+      "utility_full": 0.90625,
+      "shapley_efficiency_residual": 0.0,
+      "quantities": {
+        "Merge weights": {
+          "Math": 0.2,
+          "Medical": 0.5,
+          "Science": 0.3
+        },
+        "Absolute-output decomposition": {
+          "Math": 0.0,
+          "Medical": 0.7521575007070207,
+          "Science": 0.2478424992929195
+        },
+        "FAS coordinates": {
+          "Math": 0.0,
+          "Medical": 0.9999999999999455,
+          "Science": 0.0
+        }
+      },
+      "spearman_shapley": {
+        "Merge weights": 0.0,
+        "Absolute-output decomposition": 0.0,
+        "FAS coordinates": 0.5000000000000001
+      },
+      "spearman_loo": {
+        "Merge weights": 0.0,
+        "Absolute-output decomposition": 0.0,
+        "FAS coordinates": 0.5000000000000001
+      },
+      "top_shapley_parent": "Math",
+      "top_parent_by_quantity": {
+        "Merge weights": "Medical",
+        "Absolute-output decomposition": "Medical",
+        "FAS coordinates": "Medical"
+      },
+      "fas_false_candidate_code_mass": 0.0,
+      "absolute_false_candidate_code_mass": 0.0,
+      "fas_relative_residual": 0.8965666240375857,
+      "absolute_relative_residual": 0.8476718206245558
+    },
+    {
+      "seed": 47,
+      "domain": "Math",
+      "shapley": {
+        "Math": 0.005208333333333336,
+        "Medical": -0.005208333333333332,
+        "Science": -0.02083333333333333
+      },
+      "leave_one_out": {
+        "Math": 0.020833333333333336,
+        "Medical": 0.0,
+        "Science": -0.03125
+      },
+      "utility_empty": 0.08333333333333333,
+      "utility_full": 0.0625,
+      "shapley_efficiency_residual": 3.469446951953614e-18,
+      "quantities": {
+        "Merge weights": {
+          "Math": 0.2,
+          "Medical": 0.5,
+          "Science": 0.3
+        },
+        "Absolute-output decomposition": {
+          "Math": 0.6276630976907882,
+          "Medical": 0.0,
+          "Science": 0.37233690230907956
+        },
+        "FAS coordinates": {
+          "Math": 0.7171769114786868,
+          "Medical": 0.0,
+          "Science": 0.28282308852109583
+        }
+      },
+      "spearman_shapley": {
+        "Merge weights": -0.5,
+        "Absolute-output decomposition": 0.5,
+        "FAS coordinates": 0.5
+      },
+      "spearman_loo": {
+        "Merge weights": -0.5,
+        "Absolute-output decomposition": 0.5,
+        "FAS coordinates": 0.5
+      },
+      "top_shapley_parent": "Math",
+      "top_parent_by_quantity": {
+        "Merge weights": "Medical",
+        "Absolute-output decomposition": "Math",
+        "FAS coordinates": "Math"
+      },
+      "fas_false_candidate_code_mass": 0.0,
+      "absolute_false_candidate_code_mass": 0.0,
+      "fas_relative_residual": 0.9902455034266127,
+      "absolute_relative_residual": 0.9649741739555089
+    },
+    {
+      "seed": 47,
+      "domain": "Medical",
+      "shapley": {
+        "Math": 0.06770833333333334,
+        "Medical": 0.10937500000000001,
+        "Science": 0.02083333333333331
+      },
+      "leave_one_out": {
+        "Math": 0.08333333333333337,
+        "Medical": 0.13541666666666674,
+        "Science": 0.14583333333333337
+      },
+      "utility_empty": 0.4479166666666667,
+      "utility_full": 0.6458333333333334,
+      "shapley_efficiency_residual": 0.0,
+      "quantities": {
+        "Merge weights": {
+          "Math": 0.2,
+          "Medical": 0.5,
+          "Science": 0.3
+        },
+        "Absolute-output decomposition": {
+          "Math": 0.28782226346343065,
+          "Medical": 0.5837476980880937,
+          "Science": 0.09381749311585147
+        },
+        "FAS coordinates": {
+          "Math": 0.0,
+          "Medical": 0.5521978262398867,
+          "Science": 0.269077288857606
+        }
+      },
+      "spearman_shapley": {
+        "Merge weights": 0.5,
+        "Absolute-output decomposition": 1.0,
+        "FAS coordinates": 0.5
+      },
+      "spearman_loo": {
+        "Merge weights": 0.5,
+        "Absolute-output decomposition": -0.5,
+        "FAS coordinates": 0.5
+      },
+      "top_shapley_parent": "Medical",
+      "top_parent_by_quantity": {
+        "Merge weights": "Medical",
+        "Absolute-output decomposition": "Medical",
+        "FAS coordinates": "Medical"
+      },
+      "fas_false_candidate_code_mass": 0.17872488490246666,
+      "absolute_false_candidate_code_mass": 0.034612545332546735,
+      "fas_relative_residual": 0.8336425655450517,
+      "absolute_relative_residual": 0.8964628683287851
+    },
+    {
+      "seed": 47,
+      "domain": "Science",
+      "shapley": {
+        "Math": 0.02256944444444442,
+        "Medical": 0.032986111111111105,
+        "Science": -0.013888888888888895
+      },
+      "leave_one_out": {
+        "Math": 0.01041666666666663,
+        "Medical": 0.0,
+        "Science": -0.04166666666666663
+      },
+      "utility_empty": 0.8645833333333334,
+      "utility_full": 0.90625,
+      "shapley_efficiency_residual": 0.0,
+      "quantities": {
+        "Merge weights": {
+          "Math": 0.2,
+          "Medical": 0.5,
+          "Science": 0.3
+        },
+        "Absolute-output decomposition": {
+          "Math": 0.0,
+          "Medical": 0.6582763052720954,
+          "Science": 0.34172369472784436
+        },
+        "FAS coordinates": {
+          "Math": 0.0,
+          "Medical": 0.722950658469025,
+          "Science": 0.27704934153092076
+        }
+      },
+      "spearman_shapley": {
+        "Merge weights": 0.5,
+        "Absolute-output decomposition": 0.5,
+        "FAS coordinates": 0.5
+      },
+      "spearman_loo": {
+        "Merge weights": -0.5,
+        "Absolute-output decomposition": -0.5,
+        "FAS coordinates": -0.5
+      },
+      "top_shapley_parent": "Medical",
+      "top_parent_by_quantity": {
+        "Merge weights": "Medical",
+        "Absolute-output decomposition": "Medical",
+        "FAS coordinates": "Medical"
+      },
+      "fas_false_candidate_code_mass": 0.0,
+      "absolute_false_candidate_code_mass": 0.0,
+      "fas_relative_residual": 0.8995059014958346,
+      "absolute_relative_residual": 0.8344872993576397
+    },
+    {
+      "seed": 71,
+      "domain": "Math",
+      "shapley": {
+        "Math": 0.031249999999999997,
+        "Medical": -0.020833333333333332,
+        "Science": -0.010416666666666664
+      },
+      "leave_one_out": {
+        "Math": 0.05208333333333333,
+        "Medical": -0.010416666666666671,
+        "Science": -0.020833333333333343
+      },
+      "utility_empty": 0.08333333333333333,
+      "utility_full": 0.08333333333333333,
+      "shapley_efficiency_residual": 0.0,
+      "quantities": {
+        "Merge weights": {
+          "Math": 0.2,
+          "Medical": 0.5,
+          "Science": 0.3
+        },
+        "Absolute-output decomposition": {
+          "Math": 0.8467763909389472,
+          "Medical": 0.0,
+          "Science": 0.15322360906084592
+        },
+        "FAS coordinates": {
+          "Math": 0.8560271685497388,
+          "Medical": 0.0,
+          "Science": 0.06405713008356835
+        }
+      },
+      "spearman_shapley": {
+        "Merge weights": -1.0,
+        "Absolute-output decomposition": 1.0,
+        "FAS coordinates": 1.0
+      },
+      "spearman_loo": {
+        "Merge weights": -0.5,
+        "Absolute-output decomposition": 0.5,
+        "FAS coordinates": 0.5
+      },
+      "top_shapley_parent": "Math",
+      "top_parent_by_quantity": {
+        "Merge weights": "Medical",
+        "Absolute-output decomposition": "Math",
+        "FAS coordinates": "Math"
+      },
+      "fas_false_candidate_code_mass": 0.07991570136637466,
+      "absolute_false_candidate_code_mass": 0.0,
+      "fas_relative_residual": 0.9927925407387702,
+      "absolute_relative_residual": 0.9792095516158384
+    },
+    {
+      "seed": 71,
+      "domain": "Medical",
+      "shapley": {
+        "Math": 0.052083333333333315,
+        "Medical": 0.05208333333333335,
+        "Science": 0.07291666666666663
+      },
+      "leave_one_out": {
+        "Math": 0.05208333333333337,
+        "Medical": 0.11458333333333337,
+        "Science": 0.10416666666666663
+      },
+      "utility_empty": 0.4479166666666667,
+      "utility_full": 0.625,
+      "shapley_efficiency_residual": -2.7755575615628914e-17,
+      "quantities": {
+        "Merge weights": {
+          "Math": 0.2,
+          "Medical": 0.5,
+          "Science": 0.3
+        },
+        "Absolute-output decomposition": {
+          "Math": 0.0,
+          "Medical": 0.21359840572086053,
+          "Science": 0.44316192375037955
+        },
+        "FAS coordinates": {
+          "Math": 0.0,
+          "Medical": 0.48580177591556195,
+          "Science": 0.35261979620050293
+        }
+      },
+      "spearman_shapley": {
+        "Merge weights": 0.5,
+        "Absolute-output decomposition": 1.0,
+        "FAS coordinates": 0.5
+      },
+      "spearman_loo": {
+        "Merge weights": 1.0,
+        "Absolute-output decomposition": 0.5,
+        "FAS coordinates": 1.0
+      },
+      "top_shapley_parent": "Science",
+      "top_parent_by_quantity": {
+        "Merge weights": "Medical",
+        "Absolute-output decomposition": "Science",
+        "FAS coordinates": "Medical"
+      },
+      "fas_false_candidate_code_mass": 0.16157842788389704,
+      "absolute_false_candidate_code_mass": 0.34323967052867255,
+      "fas_relative_residual": 0.8049040365454718,
+      "absolute_relative_residual": 0.9067016355638889
+    },
+    {
+      "seed": 71,
+      "domain": "Science",
+      "shapley": {
+        "Math": 0.017361111111111084,
+        "Medical": 0.04340277777777777,
+        "Science": -0.008680555555555598
+      },
+      "leave_one_out": {
+        "Math": 0.01041666666666663,
+        "Medical": 0.03125,
+        "Science": -0.01041666666666674
+      },
+      "utility_empty": 0.8645833333333334,
+      "utility_full": 0.9166666666666666,
+      "shapley_efficiency_residual": 0.0,
+      "quantities": {
+        "Merge weights": {
+          "Math": 0.2,
+          "Medical": 0.5,
+          "Science": 0.3
+        },
+        "Absolute-output decomposition": {
+          "Math": 0.0,
+          "Medical": 0.6661194206903025,
+          "Science": 0.33388057930963894
+        },
+        "FAS coordinates": {
+          "Math": 0.0,
+          "Medical": 0.8498131682902749,
+          "Science": 0.15018683170966382
+        }
+      },
+      "spearman_shapley": {
+        "Merge weights": 0.5,
+        "Absolute-output decomposition": 0.5,
+        "FAS coordinates": 0.5
+      },
+      "spearman_loo": {
+        "Merge weights": 0.5,
+        "Absolute-output decomposition": 0.5,
+        "FAS coordinates": 0.5
+      },
+      "top_shapley_parent": "Medical",
+      "top_parent_by_quantity": {
+        "Merge weights": "Medical",
+        "Absolute-output decomposition": "Medical",
+        "FAS coordinates": "Medical"
+      },
+      "fas_false_candidate_code_mass": 0.0,
+      "absolute_false_candidate_code_mass": 0.0,
+      "fas_relative_residual": 0.9218264360612929,
+      "absolute_relative_residual": 0.8270071818771992
+    }
+  ],
+  "seed_summaries": [
+    {
+      "seed": 23,
+      "mean_fas_spearman": 0.5,
+      "mean_construction_spearman": 0.16666666666666666
+    },
+    {
+      "seed": 47,
+      "mean_fas_spearman": 0.5,
+      "mean_construction_spearman": 0.16666666666666666
+    },
+    {
+      "seed": 71,
+      "mean_fas_spearman": 0.6666666666666666,
+      "mean_construction_spearman": 0.0
+    }
+  ],
+  "aggregate": {
+    "Merge weights": {
+      "mean_spearman_shapley": 0.1111111111111111,
+      "std_spearman_shapley": 0.5464532103585,
+      "n_cells": 9,
+      "mean_spearman_loo": 0.1111111111111111,
+      "top1_shapley_match_rate": 0.4444444444444444
+    },
+    "Absolute-output decomposition": {
+      "mean_spearman_shapley": 0.5962250448649377,
+      "std_spearman_shapley": 0.4032122987463037,
+      "n_cells": 9,
+      "mean_spearman_loo": 0.20733615597604876,
+      "top1_shapley_match_rate": 0.8888888888888888
+    },
+    "FAS coordinates": {
+      "mean_spearman_shapley": 0.5555555555555556,
+      "std_spearman_shapley": 0.16666666666666666,
+      "n_cells": 9,
+      "mean_spearman_loo": 0.4444444444444444,
+      "top1_shapley_match_rate": 0.7777777777777778
+    }
+  },
+  "diagnostics": {
+    "fas_win_or_tie_cells_vs_construction": 9,
+    "mean_fas_minus_construction_spearman": 0.4444444444444445,
+    "mean_fas_false_candidate_code_mass": 0.17904894033949997,
+    "mean_absolute_false_candidate_code_mass": 0.06714915156801926,
+    "max_abs_shapley_efficiency_residual": 2.7755575615628914e-17
+  },
+  "gate": {
+    "rule": "mean(FAS-Shapley rho)-mean(construction-Shapley rho)>=0.10; FAS wins/ties construction in >=6/9 cells; mean FAS rho>=0",
+    "pass": true,
+    "claim_if_pass": "C4 supported in tested controlled same-scale adapter-composition family; FAS ranking aligns with realized counterfactual contribution better than construction share on average, without equating FAS to causal contribution.",
+    "claim_if_fail": "C4 downgraded; FAS remains a geometric ancestry coordinate and functional-contribution interpretation is unsupported."
+  },
+  "guardrails": [
+    "Exact Shapley uses fixed-coefficient 2^3 subset game.",
+    "Negative Shapley values are retained.",
+    "Seed 11 excluded.",
+    "Stage5 cross-scale failure is not reinterpreted by Stage6."
+  ]
+}

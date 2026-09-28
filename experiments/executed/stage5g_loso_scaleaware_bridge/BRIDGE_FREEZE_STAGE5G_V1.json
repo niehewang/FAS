@@ -1,0 +1,30 @@
+{
+  "protocol": "FAS_STAGE5G_LOSO_SCALE_AWARE_BRIDGE_V1",
+  "status": "frozen_before_stage5g_results",
+  "scientific_role": "post_stage5_development_diagnostic_only",
+  "bridge_family": "shared_identity_regularized_residual_ridge",
+  "bridge_formula": "T(x)=x + k(x,X_train) alpha; alpha=(X_train X_train^T + lambda I)^-1 (Y_train-X_train)",
+  "fit_scope": "For held-out seed s, train only on matched 4B->1.7B sibling functional-field pairs from the other two seeds. Never use held-out student responses, construction weights, or held-out 1.7B sibling fields for fitting.",
+  "probe_leakage_rule": "Remove every global probe ID appearing in held-out Active-B32 or Random-B32 selections from bridge training and inner validation, even when that probe occurs in another seed.",
+  "lambda_selection": "Choose one dimensionless ridge factor by two-fold inner cross-seed validation over the two training seeds; refit on both training seeds using the selected factor.",
+  "ridge_factor_grid": [0.0001,0.001,0.01,0.1,1.0,10.0,100.0],
+  "coefficient_scaling": "Use held-out 4B global ancestor norms multiplied by per-domain norm ratios estimated only from bridge-training seed pairs. Residual geometry is invariant to positive column scaling; pi is descriptive only and receives no support/calibration claim.",
+  "loso_seeds": [23,47,71],
+  "frozen_gate": {
+    "each_seed_bridge_mean_residual_max": 0.82,
+    "each_seed_mean_improvement_vs_raw_min": 0.10,
+    "each_strategy_improvement_vs_raw_min": 0.07,
+    "pooled_bridge_mean_residual_max": 0.80,
+    "pooled_fraction_of_oracle_gap_recovered_min": 0.50,
+    "pooled_field_cosine_improvement_min": 0.10
+  },
+  "if_pass": "Freeze bridge v1 and run a genuinely new held-out confirmatory cross-scale KD seed before any strong C3 claim or L7.",
+  "if_fail": "Do not enter L7. Revise the cross-scale functional representation/bridge family and label the revision development-only.",
+  "guardrails": [
+    "Stage5 original cross-scale results remain unchanged and must be reported.",
+    "Stage5E/F same-scale sibling experts are calibration/diagnostic surrogates, not genealogical parents.",
+    "Stage4 G0 support calibration does not transfer to this bridge.",
+    "Construction/exposure weights are never used as bridge targets or functional ground truth.",
+    "Passing LOSO Stage5G is development evidence only because the bridge was designed after Stage5; a new seed is required for confirmatory C3 evidence."
+  ]
+}

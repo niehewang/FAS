@@ -1,0 +1,83 @@
+{
+  "updated": "2026-09-27",
+  "authoritative_version": "v2_after_stage7",
+  "stages": {
+    "stage1": {
+      "status": "complete"
+    },
+    "stage2": {
+      "status": "complete"
+    },
+    "stage3": {
+      "status": "complete",
+      "seeds": [
+        23,
+        47,
+        71
+      ]
+    },
+    "stage4": {
+      "status": "complete",
+      "matched_g0": true
+    },
+    "stage5": {
+      "status": "complete",
+      "cross_scale_C3": false,
+      "note": "4B->1.7B KD not supported"
+    },
+    "stage5EF": {
+      "status": "complete",
+      "same_scale_diagnostic_residual": 0.6744
+    },
+    "stage5G": {
+      "status": "complete",
+      "gate_pass": false,
+      "pooled_bridge_residual": 0.9571
+    },
+    "stage5H": {
+      "status": "cancelled_do_not_run"
+    },
+    "stage6": {
+      "status": "complete",
+      "C4_gate_pass": true,
+      "fas_shapley_spearman": 0.5556,
+      "construction_spearman": 0.1111,
+      "absolute_spearman": 0.5962,
+      "wins_or_ties_vs_construction": "9/9"
+    },
+    "stage7": {
+      "status": "complete",
+      "exit_code": 0,
+      "C6_gate_pass": true,
+      "C8_gate_pass": false,
+      "C6": {
+        "support_jaccard": 1.0,
+        "coordinate_spearman": 1.0,
+        "minilm_parent_f1": 1.0,
+        "bge_parent_f1": 1.0
+      },
+      "C8": {
+        "open_auroc": 0.746031746031746,
+        "known_false_bank_insufficient_rate": 0.0,
+        "unknown_bank_insufficient_rate": 0.5238095238095238,
+        "probe_pair_shuffle_collapse_seeds": 3,
+        "base_zero_false_signal_rate": 0.0
+      }
+    },
+    "stage8": {
+      "status": "next_only_remaining_server_block",
+      "package": "FAS_Server_Stage8_DeepAncestry_MatchedScale_v1.tar.gz",
+      "scope": "same-scale 4B deep ancestry; cross-scale C3 remains closed"
+    }
+  },
+  "claim_status": {
+    "C1": "supported",
+    "C2": "supported_scoped",
+    "C3_cross_scale": "not_supported_boundary",
+    "C4": "supported",
+    "C5": "supported_matched_G0_only",
+    "C6": "supported_tested_encoders",
+    "C8_broad_open_set": "not_supported_boundary"
+  },
+  "next": "Run Stage8 once; then freeze experiments and integrate manuscript. No Stage8 rescue branches."
+}

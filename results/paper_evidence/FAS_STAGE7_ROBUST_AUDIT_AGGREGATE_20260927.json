@@ -1,0 +1,37 @@
+{
+  "protocol": "FAS_STAGE7_ROBUST_AUDIT_V1",
+  "seeds": [
+    23,
+    47,
+    71
+  ],
+  "C6_encoder_sensitivity": {
+    "mean_alt_support_jaccard_vs_primary": 1.0,
+    "mean_alt_coordinate_spearman_vs_primary": 1.0,
+    "alt_encoder_mean_true_parent_f1": {
+      "minilm": 1.0,
+      "bge": 1.0
+    },
+    "gate_pass": true,
+    "claim_if_pass": "C6 supported for tested sentence encoders: ancestry support/ranking conclusions are qualitatively stable. Finite-sample calibration remains specific to the primary evaluator.",
+    "claim_if_fail": "C6 downgraded: evaluator sensitivity is material; paper claims are restricted to the primary MPNet evaluator."
+  },
+  "C8_selective_open_set": {
+    "pooled_signal_eligible_known_n": 24,
+    "pooled_signal_eligible_unknown_n": 21,
+    "pooled_open_auroc": 0.746031746031746,
+    "pooled_known_false_bank_insufficient_rate": 0.0,
+    "pooled_unknown_bank_insufficient_rate": 0.5238095238095238,
+    "probe_pair_shuffle_collapse_seeds": 3,
+    "base_zero_false_signal_rate": 0.0,
+    "gate_pass": false,
+    "claim_if_pass": "C8 supported in the frozen restricted-bank G0 setting: selective inference abstains on withheld-ancestor targets while controlling known-target false bank-insufficiency, and negative controls collapse.",
+    "claim_if_fail": "C8 downgraded: retain low-signal/bank-insufficiency gates as safeguards, without a broad open-set claim."
+  },
+  "stage7_gate_pass": false,
+  "guardrails": [
+    "No alternative-encoder conformal transfer claim.",
+    "Science withheld from restricted bank/cal-open/known-test construction.",
+    "Stage5/C3 remains closed regardless of Stage7."
+  ]
+}

@@ -1,0 +1,11 @@
+-r requirements.txt
+torch>=2.2
+transformers>=4.51
+sentence-transformers>=3.0
+diffusers>=0.30
+accelerate>=0.30
+peft>=0.12
+datasets>=3.0
+scikit-learn>=1.4
+pyyaml>=6.0
+bitsandbytes>=0.43

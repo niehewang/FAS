@@ -1,0 +1,51 @@
+model_name: runs/checkpoints/L6-router-kd-sft__v1__1p7b__s47/student_router_full
+domain: AuxiliarySFT
+output_dir: runs/checkpoints/L6-router-kd-sft__v1__1p7b__s47/student_router_sft
+seed: 47
+trust_remote_code: true
+torch_dtype: bfloat16
+qlora_4bit: true
+bnb_4bit_quant_type: nf4
+bnb_compute_dtype: bfloat16
+bnb_double_quant: true
+gradient_checkpointing: true
+max_seq_length: 2048
+data:
+  path: data/deep_chain/auxiliary_sft.jsonl
+  split: train
+  prompt_field: prompt
+  response_field: response
+  mask_prompt_loss: true
+  use_chat_template: false
+  template: '{prompt}
+
+    {response}'
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  bias: none
+  target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+training:
+  epochs: 1.0
+  max_steps: -1
+  batch_size: 1
+  grad_accum: 16
+  learning_rate: 0.0001
+  weight_decay: 0.0
+  warmup_ratio: 0.03
+  lr_scheduler: cosine
+  logging_steps: 10
+  save_strategy: steps
+  save_steps: 250
+  save_total_limit: 2
+  bf16: true
+  fp16: false
+  report_to: none

@@ -1,0 +1,12 @@
+mode: mixture
+seed: 42
+input_jsonl: data/distillation/pilot_prompts.jsonl
+output_jsonl: data/distillation/mixture_teacher_responses.jsonl
+teachers:
+  - {name: Math, base: Qwen/Qwen3-4B-Base, adapter: runs/experts/math/adapter, weight: 0.30}
+  - {name: Code, base: Qwen/Qwen3-4B-Base, adapter: runs/experts/code/adapter, weight: 0.30}
+  - {name: Medical, base: Qwen/Qwen3-4B-Base, adapter: runs/experts/medical/adapter, weight: 0.20}
+  - {name: Science, base: Qwen/Qwen3-4B-Base, adapter: runs/experts/science/adapter, weight: 0.20}
+generation:
+  max_new_tokens: 512
+  do_sample: false

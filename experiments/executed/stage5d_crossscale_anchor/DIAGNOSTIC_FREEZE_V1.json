@@ -1,0 +1,27 @@
+{
+  "protocol_id": "FAS_STAGE5D_CROSSSCALE_ANCHOR_DIAGNOSTIC_V1",
+  "status": "post_stage5_diagnostic_not_confirmatory_claim_test",
+  "purpose": "Diagnose failed Stage5 C3 before any L7 run; no retraining and no target-label tuning.",
+  "seeds": [23, 47, 71],
+  "target": "L5-mixture-kd-v2-1p7b",
+  "frozen_measurement": "deterministic semantic-output IFRF with all-mpnet-base-v2",
+  "rules": [
+    "Do not rerun Stage1-4 or retrain Stage5 students.",
+    "Preserve original Stage5 results unchanged.",
+    "Correct Stage5 diagnostic coordinates to use the v0.11 global ancestor-norm normalization; note that positive column rescaling does not change NNLS cone residuals.",
+    "Learn any cross-scale transfer only from paired 4B-base/1.7B-base anchor IFRFs, excluding the evaluated probe set.",
+    "Select ridge strength only by internal cross-validation on anchor pairs; do not use KD target responses, support labels, or construction weights for tuning.",
+    "All corrected/transfer variants are diagnostic G1 analyses and do not inherit matched-G0 finite-sample guarantees.",
+    "Teacher exposure weights remain diagnostic construction metadata, not functional-coordinate ground truth."
+  ],
+  "variants": [
+    "legacy_raw_stage5_reference",
+    "protocol_normed_paired_anchor",
+    "protocol_normed_no_anchor_control",
+    "protocol_normed_wrong_4b_anchor_control",
+    "protocol_normed_shuffled_1p7b_anchor_control",
+    "unit_direction_paired_anchor_diagnostic",
+    "anchor_diagonal_transfer_diagnostic",
+    "anchor_ridge_transfer_diagnostic"
+  ]
+}

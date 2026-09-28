@@ -1,0 +1,236 @@
+{
+  "version": "2026-09-27-final",
+  "experiment_phase": "frozen",
+  "next_action": "manuscript_integration",
+  "stage8": {
+    "protocol": "FAS_STAGE8_DEEP_ANCESTRY_MATCHEDSCALE_V1",
+    "seeds": [
+      23,
+      47,
+      71
+    ],
+    "summary": {
+      "D1_merge": {
+        "active": {
+          "fas": {
+            "n": 3,
+            "parent_f1": 0.7936507936507936,
+            "true_parent_mass": 0.7501012522285753,
+            "relative_residual": 0.5846175503192393,
+            "top3_overlap_fraction": 0.6666666666666666,
+            "decomposable_rate_transfer_diagnostic": 1.0
+          },
+          "absolute": {
+            "n": 3,
+            "parent_f1": 0.9047619047619048,
+            "true_parent_mass": 0.8186112576915899,
+            "relative_residual": 0.5655811878114648,
+            "top3_overlap_fraction": 0.7777777777777777,
+            "decomposable_rate_transfer_diagnostic": 1.0
+          }
+        },
+        "random": {
+          "fas": {
+            "n": 3,
+            "parent_f1": 0.8571428571428571,
+            "true_parent_mass": 0.7749103908039409,
+            "relative_residual": 0.5853256932101728,
+            "top3_overlap_fraction": 0.6666666666666666,
+            "decomposable_rate_transfer_diagnostic": 1.0
+          },
+          "absolute": {
+            "n": 3,
+            "parent_f1": 0.8571428571428571,
+            "true_parent_mass": 0.7927780014479683,
+            "relative_residual": 0.5451947759601782,
+            "top3_overlap_fraction": 0.7777777777777777,
+            "decomposable_rate_transfer_diagnostic": 1.0
+          }
+        }
+      },
+      "D2_sft": {
+        "active": {
+          "fas": {
+            "n": 3,
+            "parent_f1": 0.8571428571428571,
+            "true_parent_mass": 0.7843515368855724,
+            "relative_residual": 0.6576185380179654,
+            "top3_overlap_fraction": 0.7777777777777777,
+            "decomposable_rate_transfer_diagnostic": 1.0
+          },
+          "absolute": {
+            "n": 3,
+            "parent_f1": 0.9047619047619048,
+            "true_parent_mass": 0.8298746974400862,
+            "relative_residual": 0.7362536734890228,
+            "top3_overlap_fraction": 0.8888888888888888,
+            "decomposable_rate_transfer_diagnostic": 1.0
+          }
+        },
+        "random": {
+          "fas": {
+            "n": 3,
+            "parent_f1": 0.8571428571428571,
+            "true_parent_mass": 0.8167610534783623,
+            "relative_residual": 0.6495548258754064,
+            "top3_overlap_fraction": 0.6666666666666666,
+            "decomposable_rate_transfer_diagnostic": 1.0
+          },
+          "absolute": {
+            "n": 3,
+            "parent_f1": 0.7936507936507936,
+            "true_parent_mass": 0.7992229587107857,
+            "relative_residual": 0.7229763422923923,
+            "top3_overlap_fraction": 0.7777777777777777,
+            "decomposable_rate_transfer_diagnostic": 1.0
+          }
+        }
+      },
+      "D3_int4": {
+        "active": {
+          "fas": {
+            "n": 3,
+            "parent_f1": 0.8571428571428571,
+            "true_parent_mass": 0.7860932881633426,
+            "relative_residual": 0.7045940018756167,
+            "top3_overlap_fraction": 0.6666666666666666,
+            "decomposable_rate_transfer_diagnostic": 0.3333333333333333
+          },
+          "absolute": {
+            "n": 3,
+            "parent_f1": 0.8571428571428571,
+            "true_parent_mass": 0.8306165002557432,
+            "relative_residual": 0.7797806134677899,
+            "top3_overlap_fraction": 0.8888888888888888,
+            "decomposable_rate_transfer_diagnostic": 0.3333333333333333
+          }
+        },
+        "random": {
+          "fas": {
+            "n": 3,
+            "parent_f1": 0.8571428571428571,
+            "true_parent_mass": 0.807991465675378,
+            "relative_residual": 0.6936374350267144,
+            "top3_overlap_fraction": 0.7777777777777777,
+            "decomposable_rate_transfer_diagnostic": 0.3333333333333333
+          },
+          "absolute": {
+            "n": 3,
+            "parent_f1": 0.9047619047619048,
+            "true_parent_mass": 0.8455783918456632,
+            "relative_residual": 0.7363479549514499,
+            "top3_overlap_fraction": 0.8888888888888888,
+            "decomposable_rate_transfer_diagnostic": 0.3333333333333333
+          }
+        }
+      },
+      "D4_kd4b": {
+        "active": {
+          "fas": {
+            "n": 3,
+            "parent_f1": 0.7936507936507936,
+            "true_parent_mass": 0.7453294354350112,
+            "relative_residual": 0.7105572346295901,
+            "top3_overlap_fraction": 0.6666666666666666,
+            "decomposable_rate_transfer_diagnostic": 0.6666666666666666
+          },
+          "absolute": {
+            "n": 3,
+            "parent_f1": 0.8571428571428571,
+            "true_parent_mass": 0.7038441012704171,
+            "relative_residual": 0.7614121490465303,
+            "top3_overlap_fraction": 0.6666666666666666,
+            "decomposable_rate_transfer_diagnostic": 0.6666666666666666
+          }
+        },
+        "random": {
+          "fas": {
+            "n": 3,
+            "parent_f1": 0.8380952380952381,
+            "true_parent_mass": 0.826041617182966,
+            "relative_residual": 0.7351157348153956,
+            "top3_overlap_fraction": 0.7777777777777777,
+            "decomposable_rate_transfer_diagnostic": 0.0
+          },
+          "absolute": {
+            "n": 3,
+            "parent_f1": 0.7936507936507936,
+            "true_parent_mass": 0.7759814311877465,
+            "relative_residual": 0.7723563936777853,
+            "top3_overlap_fraction": 0.7777777777777777,
+            "decomposable_rate_transfer_diagnostic": 0.0
+          }
+        }
+      }
+    },
+    "gate": {
+      "D4_active_mean_parent_f1": 0.7936507936507936,
+      "D4_active_mean_true_parent_mass": 0.7453294354350112,
+      "D4_active_mean_relative_residual": 0.7105572346295901,
+      "D4_active_f1_retention_vs_D1": 0.99999999999874,
+      "D4_active_seeds_parent_f1_ge_0p60": 3,
+      "pass": true
+    },
+    "claim_if_pass": "Deep functional ancestry remains meaningfully recoverable through a matched-scale Merge->SFT->INT4->KD chain; this is a same-family depth claim only.",
+    "claim_if_fail": "Deep ancestry degrades materially under the tested chain; report the trajectory as a boundary result and do not make a broad deep-lineage claim.",
+    "cross_scale_C3": "closed regardless of Stage8"
+  },
+  "claims": {
+    "C1": {
+      "status": "supported",
+      "scope": "same-family functional geometry"
+    },
+    "C2": {
+      "status": "supported",
+      "scope": "tested same-family multi-parent decomposition",
+      "note": "Absolute remains strong"
+    },
+    "C3": {
+      "status": "not_supported",
+      "scope": "4B-to-1.7B cross-scale Mixture-KD",
+      "note": "representation mismatch; LOSO bridge failed"
+    },
+    "C4": {
+      "status": "supported",
+      "fas_shapley_spearman": 0.5555555556,
+      "construction_spearman": 0.1111111111,
+      "absolute_spearman": 0.5962,
+      "win_tie_cells_vs_construction": "9/9"
+    },
+    "C5": {
+      "status": "supported_with_scope",
+      "scope": "matched Stage4 L1 finite-sample; L2/deep-chain transfer diagnostic only"
+    },
+    "C6": {
+      "status": "supported",
+      "support_jaccard": 1.0,
+      "coordinate_spearman": 1.0,
+      "encoders": [
+        "MPNet",
+        "MiniLM",
+        "BGE"
+      ]
+    },
+    "C8": {
+      "status": "not_supported_broadly",
+      "pooled_auroc": 0.746,
+      "unknown_bank_insufficient_rate": 0.5238,
+      "known_false_bank_insufficient_rate": 0.0
+    },
+    "deep_ancestry_matched_scale": {
+      "status": "supported",
+      "D4_active_parent_f1": 0.7936507936507936,
+      "D4_active_true_parent_mass": 0.7453294354350112,
+      "D4_active_relative_residual": 0.7105572346295901,
+      "D4_f1_retention_vs_D1": 0.99999999999874,
+      "seeds_ge_0p60": 3
+    }
+  },
+  "guardrails": [
+    "No new exploratory server experiments after Stage8.",
+    "Cross-scale C3 remains closed.",
+    "Stage4 finite-sample guarantee applies only to matched L1 calibration.",
+    "Construction weights are not functional ground truth.",
+    "Absolute is a strong baseline and must be reported fairly."
+  ]
+}

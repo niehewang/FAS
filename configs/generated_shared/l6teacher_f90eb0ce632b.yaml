@@ -1,0 +1,25 @@
+mode: router
+seed: 23
+input_jsonl: data/distillation/pilot_prompts_with_domains.jsonl
+output_jsonl: runs/teacher_data_shared/l6teacher_f90eb0ce632b/responses.jsonl
+teachers:
+- name: Math
+  base: Qwen/Qwen3-4B-Base
+  adapter: runs/experts/math/adapter
+- name: Code
+  base: Qwen/Qwen3-4B-Base
+  adapter: runs/experts/code/adapter
+- name: Medical
+  base: Qwen/Qwen3-4B-Base
+  adapter: runs/experts/medical/adapter
+- name: Science
+  base: Qwen/Qwen3-4B-Base
+  adapter: runs/experts/science/adapter
+domain_to_teacher:
+  Math: Math
+  Code: Code
+  Medical: Medical
+  Science: Science
+generation:
+  max_new_tokens: 512
+  do_sample: false

@@ -1,0 +1,58 @@
+version: 1
+base_model: Qwen/Qwen3-4B-Base
+base_model_expected_license: apache-2.0
+raw_examples_per_domain: 3600
+final_examples_per_domain: 3000
+sampling_seed: 20260921
+shuffle_buffer: 20000
+max_prompt_chars: 12000
+max_response_chars: 16000
+
+# Formal TPAMI sibling-expert corpora. Dataset revisions are resolved to immutable
+# Hugging Face commit SHAs at preparation time and written into the lock manifest.
+domains:
+  math:
+    domain_label: Math
+    dataset: nvidia/OpenMathInstruct-2
+    config_name: null
+    split: train_1M
+    expected_license: cc-by-4.0
+    transform: openmath2
+    source_url: https://huggingface.co/datasets/nvidia/OpenMathInstruct-2
+    notes: >-
+      Use the 1M fair-downsampled training split. Held-out math probes use the
+      MATH test split; contamination auditing removes exact/high-overlap records.
+
+  code:
+    domain_label: Code
+    dataset: m-a-p/Code-Feedback
+    config_name: null
+    split: train
+    expected_license: apache-2.0
+    transform: code_feedback
+    source_url: https://huggingface.co/datasets/m-a-p/Code-Feedback
+    notes: Multi-turn code instructions; extract one user prompt and final assistant answer.
+
+  medical:
+    domain_label: Medical
+    dataset: openlifescienceai/medmcqa
+    config_name: null
+    split: train
+    expected_license: apache-2.0
+    transform: medmcqa
+    source_url: https://huggingface.co/datasets/openlifescienceai/medmcqa
+    notes: Use exam questions with correct option and available explanation.
+
+  science:
+    domain_label: Science
+    dataset: stemdataset/STEM
+    config_name: null
+    split: train
+    expected_license: apache-2.0
+    transform: stem_science_text
+    source_url: https://huggingface.co/datasets/stemdataset/STEM
+    filters:
+      subject: science
+      pic_prob: false
+      pic_choice: false
+    notes: Restrict to text-only science questions; exclude multimodal items.

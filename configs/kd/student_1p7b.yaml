@@ -1,0 +1,36 @@
+# Response-distillation student. Point data.path to generate_teacher_data.py output.
+model_name: Qwen/Qwen3-1.7B-Base
+domain: MultiTeacherStudent
+output_dir: runs/students/qwen3_1p7b_mixture
+seed: 42
+trust_remote_code: true
+torch_dtype: bfloat16
+qlora_4bit: true
+gradient_checkpointing: true
+max_seq_length: 2048
+data:
+  path: data/distillation/mixture_teacher_responses.jsonl
+  split: train
+  prompt_field: prompt
+  response_field: response
+  template: "{prompt}\n{response}"
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  bias: none
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+training:
+  epochs: 1.0
+  batch_size: 1
+  grad_accum: 16
+  learning_rate: 0.0002
+  warmup_ratio: 0.03
+  lr_scheduler: cosine
+  logging_steps: 10
+  save_strategy: steps
+  save_steps: 250
+  save_total_limit: 2
+  bf16: true
+  fp16: false
+  report_to: none

@@ -1,0 +1,6 @@
+{"probe_id":"style_001","domain":"style","base_query":"a small stone house beside a lake, photograph","edited_query":"a small stone house beside a lake, watercolor painting"}
+{"probe_id":"object_001","domain":"object","base_query":"a red sports car parked under a tree, photograph","edited_query":"a red motorcycle parked under a tree, photograph"}
+{"probe_id":"attribute_001","domain":"attribute","base_query":"a blue ceramic vase on a wooden table","edited_query":"a red ceramic vase on a wooden table"}
+{"probe_id":"spatial_001","domain":"spatial","base_query":"a cat sitting beside a wooden box","edited_query":"a cat sitting behind a wooden box"}
+{"probe_id":"view_001","domain":"viewpoint","base_query":"front view of a modern chair in a studio","edited_query":"side view of a modern chair in a studio"}
+{"probe_id":"lighting_001","domain":"lighting","base_query":"a city street at noon, natural light","edited_query":"a city street at night, neon light"}

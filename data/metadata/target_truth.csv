@@ -1,0 +1,55 @@
+target_id,run_id,method,setting,parent_names,true_support,true_pi,seed,queries,scenario,bank_complete,signal_bearing
+L1-linear-2p__v1__same__s11,L1-linear-2p__v1__same__s11,FAS,clean,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code""]",,11,,L1-linear-2p,1,1
+L1-linear-2p__v1__same__s23,L1-linear-2p__v1__same__s23,FAS,clean,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code""]",,23,,L1-linear-2p,1,1
+L1-linear-2p__v1__same__s47,L1-linear-2p__v1__same__s47,FAS,clean,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code""]",,47,,L1-linear-2p,1,1
+L1-linear-2p__v2__same__s11,L1-linear-2p__v2__same__s11,FAS,clean,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Medical""]",,11,,L1-linear-2p,1,1
+L1-linear-2p__v2__same__s23,L1-linear-2p__v2__same__s23,FAS,clean,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Medical""]",,23,,L1-linear-2p,1,1
+L1-linear-2p__v2__same__s47,L1-linear-2p__v2__same__s47,FAS,clean,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Medical""]",,47,,L1-linear-2p,1,1
+L1-linear-2p__v3__same__s11,L1-linear-2p__v3__same__s11,FAS,clean,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Code"", ""Science""]",,11,,L1-linear-2p,1,1
+L1-linear-2p__v3__same__s23,L1-linear-2p__v3__same__s23,FAS,clean,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Code"", ""Science""]",,23,,L1-linear-2p,1,1
+L1-linear-2p__v3__same__s47,L1-linear-2p__v3__same__s47,FAS,clean,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Code"", ""Science""]",,47,,L1-linear-2p,1,1
+L2-ties-3p__v1__same__s11,L2-ties-3p__v1__same__s11,FAS,clean,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Science""]",,11,,L2-ties-3p,1,1
+L2-ties-3p__v1__same__s23,L2-ties-3p__v1__same__s23,FAS,clean,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Science""]",,23,,L2-ties-3p,1,1
+L2-ties-3p__v1__same__s47,L2-ties-3p__v1__same__s47,FAS,clean,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Science""]",,47,,L2-ties-3p,1,1
+L2-ties-3p__v2__same__s11,L2-ties-3p__v2__same__s11,FAS,clean,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Medical"", ""Science""]",,11,,L2-ties-3p,1,1
+L2-ties-3p__v2__same__s23,L2-ties-3p__v2__same__s23,FAS,clean,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Medical"", ""Science""]",,23,,L2-ties-3p,1,1
+L2-ties-3p__v2__same__s47,L2-ties-3p__v2__same__s47,FAS,clean,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Medical"", ""Science""]",,47,,L2-ties-3p,1,1
+L3-dare-sft__v1__same__s11,L3-dare-sft__v1__same__s11,FAS,sft,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical""]",,11,,L3-dare-sft,1,1
+L3-dare-sft__v1__same__s23,L3-dare-sft__v1__same__s23,FAS,sft,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical""]",,23,,L3-dare-sft,1,1
+L3-dare-sft__v1__same__s47,L3-dare-sft__v1__same__s47,FAS,sft,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical""]",,47,,L3-dare-sft,1,1
+L3-dare-sft__v2__same__s11,L3-dare-sft__v2__same__s11,FAS,sft,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Code"", ""Medical"", ""Science""]",,11,,L3-dare-sft,1,1
+L3-dare-sft__v2__same__s23,L3-dare-sft__v2__same__s23,FAS,sft,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Code"", ""Medical"", ""Science""]",,23,,L3-dare-sft,1,1
+L3-dare-sft__v2__same__s47,L3-dare-sft__v2__same__s47,FAS,sft,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Code"", ""Medical"", ""Science""]",,47,,L3-dare-sft,1,1
+L4-merge-sft-int4__v1__same__s11,L4-merge-sft-int4__v1__same__s11,FAS,sft,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Science""]",,11,,L4-merge-sft-int4,1,1
+L4-merge-sft-int4__v1__same__s23,L4-merge-sft-int4__v1__same__s23,FAS,sft,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Science""]",,23,,L4-merge-sft-int4,1,1
+L4-merge-sft-int4__v1__same__s47,L4-merge-sft-int4__v1__same__s47,FAS,sft,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Science""]",,47,,L4-merge-sft-int4,1,1
+L5-mixture-kd__v1__1p7b__s11,L5-mixture-kd__v1__1p7b__s11,FAS,kd,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical"", ""Science""]",,11,,L5-mixture-kd,1,1
+L5-mixture-kd__v1__1p7b__s23,L5-mixture-kd__v1__1p7b__s23,FAS,kd,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical"", ""Science""]",,23,,L5-mixture-kd,1,1
+L5-mixture-kd__v1__1p7b__s47,L5-mixture-kd__v1__1p7b__s47,FAS,kd,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical"", ""Science""]",,47,,L5-mixture-kd,1,1
+L5-mixture-kd__v1__0p6b__s11,L5-mixture-kd__v1__0p6b__s11,FAS,kd,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical"", ""Science""]",,11,,L5-mixture-kd,1,1
+L5-mixture-kd__v1__0p6b__s23,L5-mixture-kd__v1__0p6b__s23,FAS,kd,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical"", ""Science""]",,23,,L5-mixture-kd,1,1
+L5-mixture-kd__v1__0p6b__s47,L5-mixture-kd__v1__0p6b__s47,FAS,kd,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical"", ""Science""]",,47,,L5-mixture-kd,1,1
+L5-mixture-kd__v2__1p7b__s11,L5-mixture-kd__v2__1p7b__s11,FAS,kd,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical"", ""Science""]",,11,,L5-mixture-kd,1,1
+L5-mixture-kd__v2__1p7b__s23,L5-mixture-kd__v2__1p7b__s23,FAS,kd,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical"", ""Science""]",,23,,L5-mixture-kd,1,1
+L5-mixture-kd__v2__1p7b__s47,L5-mixture-kd__v2__1p7b__s47,FAS,kd,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical"", ""Science""]",,47,,L5-mixture-kd,1,1
+L5-mixture-kd__v2__0p6b__s11,L5-mixture-kd__v2__0p6b__s11,FAS,kd,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical"", ""Science""]",,11,,L5-mixture-kd,1,1
+L5-mixture-kd__v2__0p6b__s23,L5-mixture-kd__v2__0p6b__s23,FAS,kd,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical"", ""Science""]",,23,,L5-mixture-kd,1,1
+L5-mixture-kd__v2__0p6b__s47,L5-mixture-kd__v2__0p6b__s47,FAS,kd,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical"", ""Science""]",,47,,L5-mixture-kd,1,1
+L6-router-kd-sft__v1__1p7b__s11,L6-router-kd-sft__v1__1p7b__s11,FAS,kd,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical"", ""Science""]",,11,,L6-router-kd-sft,1,1
+L6-router-kd-sft__v1__1p7b__s23,L6-router-kd-sft__v1__1p7b__s23,FAS,kd,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical"", ""Science""]",,23,,L6-router-kd-sft,1,1
+L6-router-kd-sft__v1__1p7b__s47,L6-router-kd-sft__v1__1p7b__s47,FAS,kd,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical"", ""Science""]",,47,,L6-router-kd-sft,1,1
+L7-deep-ancestry__v1__1p7b__s11,L7-deep-ancestry__v1__1p7b__s11,FAS,deep,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical""]",,11,,L7-deep-ancestry,1,1
+L7-deep-ancestry__v1__1p7b__s23,L7-deep-ancestry__v1__1p7b__s23,FAS,deep,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical""]",,23,,L7-deep-ancestry,1,1
+L7-deep-ancestry__v1__1p7b__s47,L7-deep-ancestry__v1__1p7b__s47,FAS,deep,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical""]",,47,,L7-deep-ancestry,1,1
+L7-deep-ancestry__v1__0p6b__s11,L7-deep-ancestry__v1__0p6b__s11,FAS,deep,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical""]",,11,,L7-deep-ancestry,1,1
+L7-deep-ancestry__v1__0p6b__s23,L7-deep-ancestry__v1__0p6b__s23,FAS,deep,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical""]",,23,,L7-deep-ancestry,1,1
+L7-deep-ancestry__v1__0p6b__s47,L7-deep-ancestry__v1__0p6b__s47,FAS,deep,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical""]",,47,,L7-deep-ancestry,1,1
+L8-open-set__known_only__same__s11,L8-open-set__known_only__same__s11,FAS,open,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical""]",,11,,L8-open-set,1,1
+L8-open-set__known_only__same__s23,L8-open-set__known_only__same__s23,FAS,open,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical""]",,23,,L8-open-set,1,1
+L8-open-set__known_only__same__s47,L8-open-set__known_only__same__s47,FAS,open,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical""]",,47,,L8-open-set,1,1
+L8-open-set__unknown_A__same__s11,L8-open-set__unknown_A__same__s11,FAS,open,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code""]",,11,,L8-open-set,0,1
+L8-open-set__unknown_A__same__s23,L8-open-set__unknown_A__same__s23,FAS,open,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code""]",,23,,L8-open-set,0,1
+L8-open-set__unknown_A__same__s47,L8-open-set__unknown_A__same__s47,FAS,open,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code""]",,47,,L8-open-set,0,1
+L8-open-set__unknown_B_heavy_transform__same__s11,L8-open-set__unknown_B_heavy_transform__same__s11,FAS,open,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical""]",,11,,L8-open-set,1,1
+L8-open-set__unknown_B_heavy_transform__same__s23,L8-open-set__unknown_B_heavy_transform__same__s23,FAS,open,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical""]",,23,,L8-open-set,1,1
+L8-open-set__unknown_B_heavy_transform__same__s47,L8-open-set__unknown_B_heavy_transform__same__s47,FAS,open,"[""Math"", ""Code"", ""Medical"", ""Science""]","[""Math"", ""Code"", ""Medical""]",,47,,L8-open-set,1,1

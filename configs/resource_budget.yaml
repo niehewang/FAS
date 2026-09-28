@@ -1,0 +1,32 @@
+# Planning-only resource budget. Replace dataset counts with audited final values before formal runs.
+models:
+  qwen3_4b_base:
+    params_billion: 4.0
+    hf_bf16_gb: 8.1
+  qwen3_1p7b_base:
+    params_billion: 1.7
+    hf_bf16_gb: 3.45
+  qwen3_0p6b_base:
+    params_billion: 0.6
+    hf_bf16_gb: 1.25
+training:
+  formal_expert_count: 12
+  core_l5_student_count: 3
+  core_l7_student_count: 3
+  max_seq_length: 2048
+  micro_batch: 1
+  grad_accum: 16
+  qlora_4bit: true
+  lora_rank: 16
+  expert_examples_per_domain: 10000
+  kd_examples_per_student: 12000
+  deep_sft_examples_per_seed: 4000
+  avg_train_tokens_per_example: 768
+audit:
+  candidate_probe_pool: 1000
+  selected_probe_budgets: [8, 16, 32, 64, 128]
+  stochastic_samples_m: 4
+  default_selected_B: 64
+storage:
+  keep_materialized_4b_merges_simultaneously: 2
+  adapter_checkpoint_multiplier: 2.0

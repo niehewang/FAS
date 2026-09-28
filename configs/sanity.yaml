@@ -1,0 +1,7 @@
+seed: 7
+num_ancestors: 4
+num_candidate_probes: 300
+response_dim: 8
+budgets: [8, 16, 32, 64]
+ridge: 1.0e-4
+noise: 0.03

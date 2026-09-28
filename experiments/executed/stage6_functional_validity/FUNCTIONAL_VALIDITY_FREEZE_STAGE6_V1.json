@@ -1,0 +1,49 @@
+{
+  "protocol": "FAS_STAGE6_FUNCTIONAL_VALIDITY_EXACT_SHAPLEY_V1",
+  "status": "frozen_before_stage6_results",
+  "scientific_role": "formal_C4_functional_validity_extension",
+  "purpose": "Test whether domain-conditioned FAS coordinates track realized counterfactual functional contribution better than construction metadata in a controlled same-scale three-parent adapter-composition family.",
+  "seeds": [23, 47, 71],
+  "base_model": "Qwen/Qwen3-4B-Base",
+  "parents": ["Math", "Medical", "Science"],
+  "candidate_bank": ["Math", "Code", "Medical", "Science"],
+  "full_descendant_weights": {"Math": 0.2, "Medical": 0.5, "Science": 0.3},
+  "counterfactual_game": "exact 2^3 fixed-coefficient subsets; deleting a parent sets only that parent's full-descendant coefficient to zero and does not renormalize the remaining coefficients",
+  "utility_domains": ["Math", "Medical", "Science"],
+  "utility_benchmark": "existing source-disjoint data/evaluation/pilot_utility.jsonl; deterministic fixed subset of 96 items/domain selected before model evaluation",
+  "utility_decode": {"do_sample": false, "max_new_tokens": 96},
+  "fas_measurement": {
+    "probe_pool": "frozen formal data/probes/interventions.jsonl",
+    "encoder": "sentence-transformers/all-mpnet-base-v2",
+    "probe_selection": "domain-conditioned active log-det, B=32, independently within Math/Medical/Science",
+    "target_decode": "greedy deterministic, samples=1, max_new_tokens=96",
+    "normalization": "v0.11 global ancestor-column norms over the full formal candidate pool"
+  },
+  "comparators": [
+    "fixed construction share",
+    "Absolute Output + NNLS using base-query embeddings with the same selected probes",
+    "domain-conditioned FAS coordinates"
+  ],
+  "primary_metric": "within each seed x functional-domain cell, Spearman rho between the three true-parent quantities and exact Shapley values; aggregate across 9 cells",
+  "secondary_metrics": [
+    "Spearman rho against leave-one-parent-out contribution U(full)-U(full\\{i})",
+    "top-1 contributing-parent agreement",
+    "false-parent leakage to Code for FAS/Absolute",
+    "exact Shapley efficiency residual"
+  ],
+  "frozen_C4_gate": {
+    "mean_spearman_fas_minus_construction_min": 0.10,
+    "fas_win_or_tie_cells_vs_construction_min": 6,
+    "mean_fas_spearman_min": 0.0
+  },
+  "interpretation_if_pass": "C4 supported in the tested controlled same-scale adapter-composition family: domain-conditioned FAS ranking aligns with realized counterfactual contribution better than construction share on average. Do not claim FAS equals causal contribution.",
+  "interpretation_if_fail": "Downgrade C4: FAS coordinates remain geometric ancestry descriptors; counterfactual functional-contribution interpretation is not supported by this experiment.",
+  "guardrails": [
+    "No seed-11 data are used as formal Stage6 evidence.",
+    "No existing expert is retrained.",
+    "Construction weights are metadata, not coordinate ground truth.",
+    "Shapley values may be negative and are never clipped to match nonnegative FAS coordinates.",
+    "Code is retained as a false candidate ancestor in the decomposition bank but omitted from the exact utility game because the frozen lightweight utility evaluator deliberately does not execute untrusted code.",
+    "Stage5 cross-scale C3 remains downgraded/unsupported for the tested KD recipe; Stage6 does not repair or reinterpret Stage5."
+  ]
+}

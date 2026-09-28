@@ -1,0 +1,19 @@
+merge_method: ties
+base_model: Qwen/Qwen3-4B-Base
+models:
+- model: runs/full/s47/math
+  parameters:
+    weight: 0.34
+    density: 0.5
+- model: runs/full/s47/code
+  parameters:
+    weight: 0.33
+    density: 0.5
+- model: runs/full/s47/science
+  parameters:
+    weight: 0.33
+    density: 0.5
+parameters:
+  normalize: true
+tokenizer_source: base
+dtype: bfloat16

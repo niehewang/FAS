@@ -1,0 +1,1 @@
+run_id,run_hash,plan_version,scenario,family,variant,seed,parents,unseen_parents,student,construction,weights,exposure,router,postprocess,ground_truth,artifact_dir,response_dir,metadata_path,status,checkpoint_or_api,notes,evidence_tier,trigger,claims
