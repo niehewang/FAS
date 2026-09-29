@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use FAS in your research, please cite the corresponding IEEE TPAMI paper."
+message: "If you use FAS in your research, please cite the corresponding paper."
 title: "FAS: Functional Ancestry Simplex for Black-Box Multi-Parent Functional Ancestry Decomposition"
 type: software
 version: 1.0.0
