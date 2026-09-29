@@ -1,6 +1,6 @@
 # FAS — Functional Ancestry Simplex
 
-Official research code release for the IEEE TPAMI project **Functional Ancestry of Foundation Models**.
+Official research code release for “Functional Ancestry of Foundation Models.”
 
 FAS studies **API-only multi-parent functional ancestry decomposition**. Instead of treating provenance as a binary source-verification problem, FAS uses controlled semantic interventions to build an **Interventional Functional Response Field (IFRF)**, constructs a Functional Ancestry Dictionary from candidate ancestors, actively selects identifiable probes, and solves a non-negative inverse problem to recover ancestor support, domain-conditioned functional ancestry coordinates, residual/explainedness, and selective audit states.
 
