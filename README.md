@@ -121,7 +121,7 @@ Matched finite-sample calibration guarantees established in Stage 4 must **not**
 
 ## Citation
 
-If you use this code, please cite the corresponding TPAMI paper. A machine-readable citation template is provided in [`CITATION.cff`](CITATION.cff).
+If you use this code, please cite the corresponding paper. A machine-readable citation template is provided in [`CITATION.cff`](CITATION.cff).
 
 ## License
 
