@@ -1,12 +1,19 @@
 # FAS — Functional Ancestry Simplex
 
+[![CI](https://github.com/niehewang/FAS/actions/workflows/ci.yml/badge.svg)](https://github.com/niehewang/FAS/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Research Code](https://img.shields.io/badge/research-code-2ea44f.svg)](#)
+[![Reproducibility](https://img.shields.io/badge/reproducibility-frozen%20evidence-6f42c1.svg)](docs/REPRODUCIBILITY.md)
+[![Citation](https://img.shields.io/badge/citation-CFF-4c1.svg)](CITATION.cff)
+
 Official research code release for “Functional Ancestry of Foundation Models.”
 
 FAS studies **API-only multi-parent functional ancestry decomposition**. Instead of treating provenance as a binary source-verification problem, FAS uses controlled semantic interventions to build an **Interventional Functional Response Field (IFRF)**, constructs a Functional Ancestry Dictionary from candidate ancestors, actively selects identifiable probes, and solves a non-negative inverse problem to recover ancestor support, domain-conditioned functional ancestry coordinates, residual/explainedness, and selective audit states.
 
 ## What is in this release
 
-This repository is a cleaned public release assembled from the final frozen manuscript codebase and the exact experiment scripts used for the reported Stage 5–8 analyses.
+This repository is a cleaned public release assembled from the final frozen research codebase and the exact experiment scripts used for the reported Stage 5–8 analyses.
 
 - `code/fas_core/` — core FAS algorithms: response fields, decomposition, active probing, conformal/selective inference, bootstrap uncertainty, metrics, and data governance.
 - `code/adapters/` — text/diffusion adapter interfaces.
@@ -111,8 +118,8 @@ This repository **does not redistribute** foundation-model weights or third-part
 
 The most authoritative compact evidence is under `results/paper_evidence/`, especially:
 
-- `FAS_TPAMI_EXPERIMENT_FREEZE_20260927_FINAL.md`
-- `FAS_TPAMI_RESULT_LEDGER_20260927_FINAL.json`
+- `FAS_EXPERIMENT_FREEZE_20260927_FINAL.md`
+- `FAS_RESULT_LEDGER_20260927_FINAL.json`
 - `stage3_confirmatory_aggregate_results.json`
 - `stage4_g0_aggregate_calibration.json`
 - Stage 6/7/8 aggregate JSON/CSV files
