@@ -1,6 +1,6 @@
 # Release v1.0.0
 
-Public code snapshot aligned with the frozen Stage 1–8 TPAMI evidence chain.
+Public research-code snapshot aligned with the frozen Stage 1–8 evidence chain.
 
 Highlights:
 
