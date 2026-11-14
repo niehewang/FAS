@@ -6,8 +6,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 E = ROOT / "results" / "paper_evidence"
 required = [
-    "FAS_TPAMI_RESULT_LEDGER_20260927_FINAL.json",
-    "FAS_TPAMI_EXPERIMENT_FREEZE_20260927_FINAL.md",
+    "FAS_RESULT_LEDGER_20260927_FINAL.json",
+    "FAS_EXPERIMENT_FREEZE_20260927_FINAL.md",
     "stage3_confirmatory_aggregate_results.json",
     "stage4_g0_aggregate_calibration.json",
     "FAS_STAGE6_FUNCTIONAL_VALIDITY_AGGREGATE_20260927.json",
