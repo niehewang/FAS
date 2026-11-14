@@ -1,20 +1,21 @@
 # Evidence Provenance Rules
 
-1. Numerical claims in the manuscript must trace to a compact result file or an archived experiment result in the separate experiment workspace.
-2. This paper-only package includes aggregate JSONs for Stage2/3/4 and Stage5 setup metadata, not raw seed archives.
-3. Seed-11 is development-only because the deterministic protocol was selected after observing its stochastic failure.
-4. Seeds 23/47/71 are the current confirmatory genealogy set.
-5. Construction weights/exposure proportions describe how descendants were built; they are not automatically the estimand for realized functional ancestry coordinates.
-6. When a future result update changes a manuscript claim, update both the relevant LaTeX text/table and the claim-status ledger.
+1. Numerical claims in the associated paper must trace to a compact result file or an archived experiment result in the separate experiment workspace.
+2. This public repository includes compact aggregate evidence rather than raw seed archives, model checkpoints, response banks, or server return packages.
+3. Development-only and confirmatory seeds retain their frozen experimental roles; release cleanup does not alter scientific settings.
+4. Construction weights or exposure proportions describe how descendants were built and are not automatically the estimand for realized functional ancestry coordinates.
+5. Scientific claim changes require a new documented experiment or release; the frozen evidence in this version must not be silently retuned.
 
+## Final frozen evidence
 
-## 2026-09-26 paper-result update v2
-- Google Drive paper update ID: `1tDE8FxoWXxqRph6yDqAV_W688LeohSve` (`FAS_TPAMI_PAPER_RESULT_UPDATE_20260926_v2.md`).
-- Google Drive result ledger ID: `15IteIA56CevzPDjAaUX-LRRelJpJGBcY` (`FAS_TPAMI_RESULT_LEDGER_20260926_v2.json`).
-- Google Drive decision-point ID: `1x8AqZHTrRhgvJZlmlpbEQEhzUVb4UIkF` (`FAS_TPAMI_CURRENT_DECISION_POINT_20260926_v2.md`).
-- Integration rule: only these compact paper-level summaries were read; Stage5/6 server-return archives were not opened in the paper-writing workspace.
+The authoritative release-level records are:
 
-## 2026-09-27 final experiment freeze
-- Final manuscript-facing files: `FAS_TPAMI_EXPERIMENT_FREEZE_20260927_FINAL.md`, `FAS_TPAMI_PAPER_RESULT_UPDATE_20260927_FINAL.md`, `FAS_TPAMI_RESULT_LEDGER_20260927_FINAL.json`.
-- Stage8 evidence: `FAS_STAGE8_DEEP_ANCESTRY_AGGREGATE_20260927.json`, `FAS_STAGE8_DEEP_ANCESTRY_ROWS_20260927.csv`, `FAS_STAGE8_DATA_MANIFEST_20260927.json`.
-- Experiment phase is frozen after Stage8; no additional exploratory server stage is part of this manuscript version.
+- `FAS_EXPERIMENT_FREEZE_20260927_FINAL.md`
+- `FAS_RESULT_LEDGER_20260927_FINAL.json`
+- `stage3_confirmatory_aggregate_results.json`
+- `stage4_g0_aggregate_calibration.json`
+- `FAS_STAGE6_FUNCTIONAL_VALIDITY_AGGREGATE_20260927.json`
+- `FAS_STAGE7_ROBUST_AUDIT_AGGREGATE_20260927.json`
+- `FAS_STAGE8_DEEP_ANCESTRY_AGGREGATE_20260927.json`
+
+Internal writing-workflow identifiers, cloud document IDs, submission metadata, and venue-specific filenames are deliberately excluded from the public evidence provenance.
