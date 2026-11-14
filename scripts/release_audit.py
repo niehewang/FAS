@@ -11,7 +11,7 @@ PATTERNS = {
     'github_token': re.compile(r'\b(?:ghp_|github_pat_)[A-Za-z0-9_]{12,}'),
     'api_secret': re.compile(r'\b(?:sk-|hf_)[A-Za-z0-9_-]{16,}'),
     'authorization_header': re.compile(r'Authorization:\s*Bearer', re.I),
-    'machine_path': re.compile(r'/(?:home|data)/[^\s\"\']+|[A-Za-z]:\\\\Users\\\\[^\s\"\']+', re.I),
+    'machine_path': re.compile(r'(?<![A-Za-z0-9_$])/(?:home|data)/[^\s\"\']+|[A-Za-z]:\\\\Users\\\\[^\s\"\']+', re.I),
     'internal_workflow': re.compile(r'\b(?:LATEST_HANDOFF|CURRENT_DECISION|NEXT_ACTION|Research OS|EXPERIMENT_EXECUTION|PAPER_WRITING)\b', re.I),
     'venue_specific': re.compile(r'\bIEEE\s+T[A-Z]{2,5}\b|\bIEEE\s+Transactions\s+on\b', re.I),
 }
