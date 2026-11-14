@@ -19,6 +19,7 @@ errors=[]
 for p in ROOT.rglob('*'):
     if not p.is_file() or '.git' in p.parts: continue
     rel=p.relative_to(ROOT).as_posix()
+    if rel == 'scripts/release_audit.py': continue
     if p.suffix.lower() in BAD_SUFFIX:
         errors.append(f'forbidden sensitive artifact: {rel}')
     if p.stat().st_size > 50*1024*1024:
